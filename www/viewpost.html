@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Front Street Primary School - Posts</title>
+    <link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/app.css" />
+   	<link type="text/css" rel="stylesheet" href="css/photoswipe.css" />
+    <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.actual.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.0.1.min.js"></script>
+    <script type="text/javascript" src="js/iscroll-watusi.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile.iscrollview.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+  </head>
+
+  <body>
+	<div id="postViewPage" data-role="page" pagename="unset">
+
+		<div data-role="header" data-theme="a" data-position="fixed">
+			<h1 id="categoryname">&nbsp;</h1>
+			<a id="backbutton" href="#" data-direction="reverse" data-prefetch data-icon="arrow-l" class="ui-btn-left">Back</a>
+	        <a id="refreshbutton" href="#" onclick="document.location.href=document.location.href" data-theme="a"><img src="icons/refresh.png" width="19" height="19" /></a>
+		</div>
+
+		<li id="loadingmsg"></li>
+
+		<div data-role="content" data-iscroll>
+			<div>
+				<div id="singleContent" style="display:none">
+					<h2 id="postTitle"></h2>
+					<div class="postDetails">
+						<div id="avatar"></div>
+						<h3 id="postDate"></h3>
+						<div id="author"></div>
+					</div>
+					<div id="postImage"></div>
+					<div class="postDetails">
+						<p id="postContent"></p>
+					</div>
+					<div id="attachments"></div>
+					<div>
+						<div class="imggallery" id="gallery"></div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	  <script type="text/javascript">
+
+			var currentPage ;
+			var theTarget;
+			var options = {};
+			var photoSwipeInstance;
+
+			$('#postViewPage').live('pageshow', function(event) {
+				var urlvars = getUrlVars()
+				pagetitle=decodeURI(urlvars["category"])
+				pagetitle=pagetitle.replace("%26","&");
+				$('.ui-page-active #categoryname').html(pagetitle);
+
+				currentPage = $(event.target);
+				theTarget = event.target;
+
+				$.getJSON(siteURL + urlvars["link"] + '?api=1', getSinglePost);
+
+				currentPage.attr('pagename', urlvars["link"]+urlvars["category"]);
+				setTimeout('setBackURL()',500)
+
+
+			});
+
+
+			$('#postViewPage').live('pagehide', function(event, ui) {
+
+					$('#postViewPage').die();
+					if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
+						$('#postViewPage').die(photoSwipeInstance);
+					}
+			});
+
+
+	  </script>
+
+    </div>
+  </body>
+</html>

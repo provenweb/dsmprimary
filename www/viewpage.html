@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Front Street Primary School - Pages</title>
+    <link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/app.css" />
+   	<link type="text/css" rel="stylesheet" href="css/photoswipe.css" />
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="js/jquery.actual.min.js"></script>
+    <script src="js/jquery.mobile-1.0.1.min.js"></script>
+    <script src="js/iscroll-watusi.js"></script>
+    <script src="js/jquery.mobile.iscrollview.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/klass.min.js"></script>
+	<script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+  </head>
+
+  <body>
+    <div id="infoViewPage" data-role="page" pagename="unset" data-add-back-btn="true" data-dom-cache="true">
+
+      <div data-role="header" data-theme="a" data-position="fixed">
+		<h1 id="categoryname">SCHOOL INFO</h1>
+		<a id="backbutton" href="schoolinfo.html" data-direction="reverse" data-prefetch data-icon="arrow-l" class="ui-btn-left">Back</a>
+        <a id="refreshbutton" href="#" class="ui-btn-right" onclick="document.location.href=document.location.href" data-theme="a"><img src="icons/refresh.png" width="19" height="19" /></a>
+      </div>
+
+      <div data-role="content" data-iscroll>
+
+		<li id="loadingmsg"></li>
+
+      	<div id="singleContent" style="display:none">
+
+			   <h2 id="postTitle"></h2>
+
+				<div id="postImage"></div>
+
+				<div class="postDetails">
+					<p id="postContent"></p>
+				</div>
+
+				<div id="attachments"></div>
+
+				<div>
+					<div class="imggallery" id="gallery"></div>
+					<div class="clear"></div>
+				</div>
+
+			</div>
+
+      </div>
+
+	  <link type="text/css" rel="stylesheet" href="css/photoswipe.css" />
+	  <script type="text/javascript" src="js/klass.min.js"></script>
+	  <script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+
+	  <script type="text/javascript">
+
+			var currentPage ;
+			var theTarget;
+			var options = {};
+			var photoSwipeInstance;
+
+			$('#infoViewPage').live('pageshow', function(event) {
+				var urlvars = getUrlVars()
+				currentPage = $(event.target);
+				theTarget = event.target;
+				$.getJSON(siteURL + pagePath + urlvars["id"] + '?api=1', getSinglePage);
+				currentPage.attr('pagename', urlvars["id"]);
+
+			});
+
+			$('#infoViewPage').live('pagehide', function(event, ui) {
+
+					$('#infoViewPage').die();
+					if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
+						$('#infoViewPage').die(photoSwipeInstance);
+					}
+			});
+
+	  </script>
+
+    </div>
+  </body>
+</html>
