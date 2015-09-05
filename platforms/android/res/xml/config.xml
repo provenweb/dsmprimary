@@ -17,6 +17,7 @@
 	</author>
     <preference name="orientation" value="portrait" />
     <content src="index.html" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="BackupWebStorage" value="local" />
     <preference name="permissions" value="none" />
@@ -24,7 +25,7 @@
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
-    <preference name="stay-in-webview" value="true" />
+    <preference name="stay-in-webview" value="false" />
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
     <preference name="show-splash-screen-spinner" value="true" />
@@ -33,6 +34,6 @@
     <preference name="android-installLocation" value="auto" />
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
-    <access origin="http://*" />
-    <access origin="https://*" />
+    <gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
+    <access origin="*" />
 </widget>

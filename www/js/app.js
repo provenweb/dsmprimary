@@ -190,10 +190,14 @@ function getNewsletters() {
 }
 
 function getPostList(data) {
-
 	posts = data.items;
 	$('.ui-page-active #postList li').remove();
 	$.each(posts, function(index, post) {
+
+        post.image = post.image.replace("'//www","\'http://www");
+        //post.avatar = post.avatar.replace("'//","\'http://");
+        //post.gallery = replaceAll(post.gallery,"'//www","\'http://www");
+
 		$('.ui-page-active #postList').append('<li><a data-ajax="false" rel="external" href="viewpost.html?link=' + post.link + '&category=' + getUrlVars()['title'] + '&return=' + escape(document.location.href) + '">' +
 		post.image +
 		'<h4>' + post.title + '</h4>' +
@@ -254,6 +258,11 @@ function getSinglePage(data) {
 	pages = data.items;
 
 	$.each(pages, function(index, thepage) {
+
+        thepage.image = thepage.image.replace("'//www","\'http://www");
+        thepage.avatar = thepage.avatar.replace("'//","\'http://");
+        thepage.gallery = replaceAll(thepage.gallery,"'//www","\'http://www");
+
 		$('.ui-page-active #postTitle').text(thepage.title);
 		$('.ui-page-active #postContent').html(thepage.content);
 		$('.ui-page-active #postImage').html(thepage.image);
