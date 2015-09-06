@@ -277,9 +277,13 @@ function getSinglePage(data) {
 
 	$.each(pages, function(index, thepage) {
 
+		alert("found a page");
+
         thepage.image = thepage.image.replace("'//www","\'http://www");
         thepage.avatar = thepage.avatar.replace("'//","\'http://");
         thepage.gallery = replaceAll(thepage.gallery,"'//www","\'http://www");
+
+		alert("title="+thepage.title);
 
 		$('#postTitle').text(thepage.title);
 		$('#postContent').html(thepage.content);
@@ -288,12 +292,21 @@ function getSinglePage(data) {
 		$('#attachments').html(thepage.attachments);
 	});
 
+	alert("debug 2");
+
 	if ($('#gallery').html()!="") {
 		photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
 	}
 
+	alert("debug 3");
+
 	$("#loadingmsg").remove();
+
+	alert("debug 4");
+
 	$("#singleContent").attr('style', 'display:block');
+
+	alert("debug 5");
 
 	$(".ui-page div.ui-content").iscrollview();
 
