@@ -277,19 +277,21 @@ function getSinglePage(data) {
 
 	$.each(pages, function(index, thepage) {
 
-		alert("found a page");
+		alert("found a page"+thepage);
 
         thepage.image = thepage.image.replace("'//www","\'http://www");
+        alert("debug 0.1");
         thepage.avatar = thepage.avatar.replace("'//","\'http://");
+        alert("debug 0.2");
         thepage.gallery = replaceAll(thepage.gallery,"'//www","\'http://www");
 
 		alert("title="+thepage.title);
 
-		$('#postTitle').text(thepage.title);
-		$('#postContent').html(thepage.content);
-		$('#postImage').html(thepage.image);
-		$('#gallery').html(thepage.gallery);
-		$('#attachments').html(thepage.attachments);
+		$('.ui-page-active #postTitle').text(thepage.title);
+		$('.ui-page-active #postContent').html(thepage.content);
+		$('.ui-page-active #postImage').html(thepage.image);
+		$('.ui-page-active #gallery').html(thepage.gallery);
+		$('.ui-page-active #attachments').html(thepage.attachments);
 	});
 
 	alert("debug 2");
