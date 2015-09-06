@@ -1,46 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.instantapps.frontstreet" version="1.7.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.instantapps.frontstreet" version="1.7.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Front Street</name>
     <description>
 		Front Street Primary School
-	</description>
+    </description>    
     <author email="sales@provenweb.co.uk" href="http://www.provenweb.co.uk">
 		Proven Web
-	</author>
-    <feature name="NetworkStatus">
-        <param name="ios-package" value="CDVConnection" />
-    </feature>
-    <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-    </feature>
-    <plugin name="NetworkStatus" value="org.apache.cordova.NetworkManager"/>
-    <content src="index.html" />
-    <feature name="http://api.phonegap.com/1.0/geolocation" />
-    <feature name="http://api.phonegap.com/1.0/network" />
-    <preference name="orientation" value="portrait" />
-    <preference name="webviewbounce" value="false" />
-    <engine name="android" spec="^4.0.2" />
-    <content src="index.html" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="DisallowOverscroll" value="true" />
+    </author>
+    
     <preference name="BackupWebStorage" value="local" />
-    <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
-    <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="false" />
-    <preference name="webviewbounce" value="false" />
-    <preference name="stay-in-webview" value="false" />
-    <preference name="detect-data-types" value="true" />
-    <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
-    <preference name="disable-cursor" value="false" />
+    <preference name="deployment-target" value="6.0" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="android-installLocation" value="auto" />
+    <preference name="auto-hide-splash-screen" value="true" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="fullscreen" value="false" />
+    <preference name="orientation" value="portrait" />
+    <preference name="permissions" value="none" />
+    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="SplashScreen" value="splash" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="target-device" value="universal" />
+    <preference name="webviewbounce" value="false" />
+    
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
-    <access origin="*" />
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
@@ -53,14 +42,16 @@
     <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
     <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
 
+    <gap:splash src="res/screen/android/screen-600-1024-portrait.png"   gap:platform="android" width="600" height="1024" />
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+       
     <gap:splash src="res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
     <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait-2x.png"        gap:platform="ios"     width="1536" height="2008" />
     
 </widget>
