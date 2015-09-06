@@ -64,16 +64,21 @@
 			var options = {};
 			var photoSwipeInstance;
 
-			$('#infoViewPage').live('pageshow', function(event) {
+			$('#infoViewPage').on('pageshow', function(event) {
 				var urlvars = getUrlVars()
 				currentPage = $(event.target);
 				theTarget = event.target;
-				$.getJSON(siteURL + pagePath + urlvars["id"] + '?api=1', getSinglePage);
+
+				var theURL=siteURL + pagePath + urlvars["id"] + '?api=1';
+				alert theURL;
+				$('#postContent').html(theURL);
+
+				$.getJSON(theURL, getSinglePage);
 				currentPage.attr('pagename', urlvars["id"]);
 
 			});
 
-			$('#infoViewPage').live('pagehide', function(event, ui) {
+			$('#infoViewPage').on('pagehide', function(event, ui) {
 
 					$('#infoViewPage').die();
 					if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
