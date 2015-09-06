@@ -273,6 +273,7 @@ function getSinglePost(data) {
 function getSinglePage(data) {
 
 	pages = data.items;
+	alert(pages);
 
 	$.each(pages, function(index, thepage) {
 
@@ -280,19 +281,19 @@ function getSinglePage(data) {
         thepage.avatar = thepage.avatar.replace("'//","\'http://");
         thepage.gallery = replaceAll(thepage.gallery,"'//www","\'http://www");
 
-		$('.ui-page-active #postTitle').text(thepage.title);
-		$('.ui-page-active #postContent').html(thepage.content);
-		$('.ui-page-active #postImage').html(thepage.image);
-		$('.ui-page-active #gallery').html(thepage.gallery);
-		$('.ui-page-active #attachments').html(thepage.attachments);
+		$('#postTitle').text(thepage.title);
+		$('#postContent').html(thepage.content);
+		$('#postImage').html(thepage.image);
+		$('#gallery').html(thepage.gallery);
+		$('#attachments').html(thepage.attachments);
 	});
 
-	if ($('.ui-page-active #gallery').html()!="") {
+	if ($('#gallery').html()!="") {
 		photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
 	}
 
-	$(".ui-page-active #loadingmsg").remove();
-	$(".ui-page-active #singleContent").attr('style', 'display:block');
+	$("#loadingmsg").remove();
+	$("#singleContent").attr('style', 'display:block');
 
 	$(".ui-page div.ui-content").iscrollview();
 
