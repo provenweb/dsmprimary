@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.instantapps.frontstreet" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.instantapps.frontstreet" version="1.5.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Front Street</name>
     <description>
 		Front Street Primary School
 	</description>
-    <author email="sales@instantapps.co.uk" href="http://www.instantapps.co.uk">
-		Instant Apps
+    <author email="sales@provenweb.co.uk" href="http://www.provenweb.co.uk">
+		Proven Web
 	</author>
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
