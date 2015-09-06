@@ -12,6 +12,12 @@
                             "xml": true,
                             "count": 1
                         }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -20,6 +26,10 @@
                     "/*": [
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -32,6 +42,9 @@
             "PACKAGE_NAME": "com.instantapps.frontstreet"
         },
         "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.instantapps.frontstreet"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.instantapps.frontstreet"
         }
     },

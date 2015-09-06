@@ -17,6 +17,9 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
     <name>Front Street</name>
     <description>
 		Front Street Primary School

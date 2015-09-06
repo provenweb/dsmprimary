@@ -14,13 +14,22 @@ module.exports = [
         "clobbers": [
             "Connection"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+        "id": "cordova-plugin-inappbrowser.inappbrowser",
+        "clobbers": [
+            "cordova.InAppBrowser.open",
+            "window.open"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.0.0",
-    "org.apache.cordova.network-information": "0.2.15"
+    "org.apache.cordova.network-information": "0.2.15",
+    "cordova-plugin-inappbrowser": "1.0.1"
 }
 // BOTTOM OF METADATA
 });

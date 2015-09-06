@@ -165,8 +165,15 @@ function getNewsletters() {
 
 			thedate = dt + append + " " + mt + " " + yr ;
 
-			$('#newsletterList').append('<li><a target="_blank" href="' + post.guid + '&download=1">' +
+			//$('#newsletterList').append('<li><a target="_system" onclick="' + post.guid + '&download=1">' +
+			//		'<h4>' + thedate + '</h4></a></li>');
+			//
+			$('#newsletterList').append('<li><a target="_system" onclick="window.open('+"'"+post.guid+"&download=1', '_system'"+')">' +
 					'<h4>' + thedate + '</h4></a></li>');
+            //$('#newsletterList').append('<li><a class="link" rel="' + post.guid + '&download=1">' +
+			//		'<h4>' + thedate + '</h4></a></li>');
+
+
 		});
 
 		$('#newsletterList').listview('refresh');
@@ -187,6 +194,16 @@ function getNewsletters() {
 
 
 	});
+}
+
+$('.link').live('tap', function() {
+    url = $(this).attr("rel");
+    loadURL(url);
+});
+
+function loadURL(url){
+    navigator.app.loadUrl(url, { openExternal:true });
+    return false;
 }
 
 function getPostList(data) {
