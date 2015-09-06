@@ -281,7 +281,7 @@ function getSinglePage(data) {
 
         thepage.image = thepage.image.replace("'//www","\'http://www");
         alert("debug 0.1");
-        thepage.avatar = thepage.avatar.replace("'//","\'http://");
+        //thepage.avatar = thepage.avatar.replace("'//","\'http://");
         alert("debug 0.2");
         thepage.gallery = replaceAll(thepage.gallery,"'//www","\'http://www");
 
