@@ -29,6 +29,7 @@
     
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
 
     <!-- Define app icon for each platform. -->

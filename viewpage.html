@@ -30,9 +30,9 @@
 
       <div data-role="content" data-iscroll>
 
-		<!--li id="loadingmsg"></li-->
+		<li id="loadingmsg"></li>
 
-      	<div id="singleContent">
+      	<div id="singleContent" style="display:none">
 
 			   <h2 id="postTitle"></h2>
 
@@ -68,12 +68,7 @@
 				var urlvars = getUrlVars()
 				currentPage = $(event.target);
 				theTarget = event.target;
-
-				var theURL=siteURL + pagePath + urlvars["id"] + '?api=1';
-				alert (theURL);
-				$('#postContent').html(theURL);
-
-				$.getJSON(theURL, getSinglePage);
+				$.getJSON(siteURL + pagePath + urlvars["id"] + '?api=1', getSinglePage);
 				currentPage.attr('pagename', urlvars["id"]);
 
 			});

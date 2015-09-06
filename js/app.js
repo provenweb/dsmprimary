@@ -273,19 +273,12 @@ function getSinglePost(data) {
 function getSinglePage(data) {
 
 	pages = data.items;
-	alert(pages);
 
 	$.each(pages, function(index, thepage) {
 
-		alert("found a page"+thepage);
-
         thepage.image = thepage.image.replace("'//www","\'http://www");
-        alert("debug 0.1");
         //thepage.avatar = thepage.avatar.replace("'//","\'http://");
-        alert("debug 0.2");
         thepage.gallery = replaceAll(thepage.gallery,"'//www","\'http://www");
-
-		alert("title="+thepage.title);
 
 		$('.ui-page-active #postTitle').text(thepage.title);
 		$('.ui-page-active #postContent').html(thepage.content);
@@ -294,21 +287,12 @@ function getSinglePage(data) {
 		$('.ui-page-active #attachments').html(thepage.attachments);
 	});
 
-	alert("debug 2");
-
-	if ($('#gallery').html()!="") {
+	if ($('.ui-page-active #gallery').html()!="") {
 		photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
 	}
 
-	alert("debug 3");
-
-	$("#loadingmsg").remove();
-
-	alert("debug 4");
-
-	$("#singleContent").attr('style', 'display:block');
-
-	alert("debug 5");
+	$(".ui-page-active #loadingmsg").remove();
+	$(".ui-page-active #singleContent").attr('style', 'display:block');
 
 	$(".ui-page div.ui-content").iscrollview();
 
