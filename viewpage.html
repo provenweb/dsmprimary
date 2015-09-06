@@ -64,13 +64,13 @@
 			var options = {};
 			var photoSwipeInstance;
 
-			$('#infoViewPage').on('pageshow', function(event) {
+			$('#infoViewPage').live('pageshow', function(event) {
 				var urlvars = getUrlVars()
 				currentPage = $(event.target);
 				theTarget = event.target;
 
 				var theURL=siteURL + pagePath + urlvars["id"] + '?api=1';
-				alert theURL;
+				alert (theURL);
 				$('#postContent').html(theURL);
 
 				$.getJSON(theURL, getSinglePage);
@@ -78,7 +78,7 @@
 
 			});
 
-			$('#infoViewPage').on('pagehide', function(event, ui) {
+			$('#infoViewPage').live('pagehide', function(event, ui) {
 
 					$('#infoViewPage').die();
 					if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
