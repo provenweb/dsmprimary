@@ -11,7 +11,11 @@
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="org.apache.cordova.statusbar" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
     
     <preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="StatusBarOverlaysWebView" value="false" />
