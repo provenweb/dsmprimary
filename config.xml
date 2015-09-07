@@ -7,7 +7,16 @@
     <author email="sales@provenweb.co.uk" href="http://www.provenweb.co.uk">
 		Proven Web
     </author>
+
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.statusbar" />
     
+    
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />  
     <preference name="BackupWebStorage" value="local" />
     <preference name="deployment-target" value="6.0" />
     <preference name="DisallowOverscroll" value="true" />
@@ -24,16 +33,8 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="stay-in-webview" value="false" />
     <preference name="target-device" value="universal" />
-    <preference name="webviewbounce" value="false" />
+    <preference name="webviewbounce" value="false" /> 
     
-    <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
-    <preference name="StatusBarStyle" value="lightcontent" />    
-    
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
