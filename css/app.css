@@ -447,7 +447,7 @@ div.attachments img {
 	background-repeat:no-repeat;
 	margin-left: -13px;	
 	border-radius:0;
-	background-size:30px 24px;	
+	background-size:30px 24px !important;	
 
 }
 
@@ -455,6 +455,7 @@ div.attachments img {
 .ui-footer .ui-block-a .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-a a:active .ui-icon-custom {
 
 	background: url(../icons/schoolhatselected.png);
+	background-size:30px 24px !important;	
 
 } 
 
@@ -464,7 +465,7 @@ div.attachments img {
 	height: 25px;
 	background: url(../icons/newsicon.png);
 	background-repeat:no-repeat;
-	background-size:29px 25px;
+	background-size:29px 25px !important;
 	margin-left: -13px;
 	opacity: 0.8;
 	border-radius:0;
@@ -474,6 +475,7 @@ div.attachments img {
 .ui-footer .ui-block-b .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-b a:active .ui-icon-custom {
 
 	background: url(../icons/newsselected.png);
+	background-size:29px 25px !important;
 
 } 
 
@@ -484,7 +486,7 @@ div.attachments img {
 	height: 26px;
 	background: url(../icons/infoicon.png);
 	background-repeat:no-repeat;
-	background-size:26px 26px;
+	background-size:26px 26px !important;
 	margin-left: -13px; 
 	border-radius:0;
 
@@ -493,6 +495,7 @@ div.attachments img {
 .ui-footer .ui-block-c .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-c a:active .ui-icon-custom {
 
 	background: url(../icons/infoiconselected.png);
+	background-size:26px 26px !important;
 
 }
 
@@ -502,7 +505,7 @@ div.attachments img {
 	height: 26px;
 	background: url(../icons/phoneicon.png);
 	background-repeat:no-repeat;
-	background-size:26px 26px;
+	background-size:26px 26px !important;
 	margin-left: -12px;
 	border-radius:0;
 
@@ -511,6 +514,7 @@ div.attachments img {
 .ui-footer .ui-block-d .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-d a:active .ui-icon-custom {
 
 	background: url(../icons/phoneselected.png);
+	background-size:26px 26px !important;
 
 }
 
