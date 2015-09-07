@@ -11,7 +11,6 @@
     <preference name="BackupWebStorage" value="local" />
     <preference name="deployment-target" value="6.0" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="android-installLocation" value="auto" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="detect-data-types" value="true" />
@@ -26,6 +25,10 @@
     <preference name="stay-in-webview" value="false" />
     <preference name="target-device" value="universal" />
     <preference name="webviewbounce" value="false" />
+    
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />    
     
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
