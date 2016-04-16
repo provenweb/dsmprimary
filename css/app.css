@@ -16,7 +16,7 @@ span.ui-btn-text {
 
 .ui-header {
 
-	background:#EA4B35;
+	background:#DD3333;
 	text-shadow:none;
 	border:0;
 	border-bottom:0;
@@ -93,7 +93,7 @@ span.latestnews {
 
 .ui-page {
 
-	background:#FFFF8D;
+	background-image:url(../icons/paper.jpg);
 }
 
 
