@@ -16,15 +16,10 @@ span.ui-btn-text {
 
 .ui-header {
 
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#6FCBFB),to(#50C5FF));
-	background-image: -webkit-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: -moz-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: -ms-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: -o-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: linear-gradient(#6FCBFB,#50C5FF);
-	text-shadow:0 -1px 1px #000;
+	background:#EA4B35;
+	text-shadow:none;
 	border:0;
-	border-bottom:1px solid black;
+	border-bottom:0;
 	
 }
 
@@ -36,8 +31,8 @@ span.ui-btn-text {
 
 	line-height:1.4em !important;
 	font-family:"TOONISH",Arial,Helvetica,sans-serif;
-	font-weight:normal;
-	font-size:20px;
+	font-weight:bold;
+	font-size:25px;
 
 	margin: 0;
 	line-height: 2.1em !important;
@@ -98,7 +93,7 @@ span.latestnews {
 
 .ui-page {
 
-	background-image:url(../icons/paper.jpg);
+	background:#FFFF8D;
 }
 
 
