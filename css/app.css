@@ -7,16 +7,21 @@
 }
 
 .ui-header hi{
-    background-color: #990000;
+    background-color: #cc0000;
 }
 
 span.ui-btn-text {
 	font-size:11px;
 }
+.ui-btn-left .ui-btn-text {
+    font-size: 17px;
+    font-family: TOONISH;
+    line-height: 22px;
+}
 
 .ui-header {
 
-	background:#DD3333;
+	background:#cc0000;
 	text-shadow:none;
 	border:0;
 	border-bottom:0;
@@ -39,6 +44,20 @@ span.ui-btn-text {
 	margin-top: 4px;
 }
 
+#contactinfo h3 {
+
+    font-family: TOONISH;
+    font-size: 25px;
+    line-height: 10px;
+}
+
+#contactinfo p {
+
+    font-family: TOONISH;
+    font-size: 22px;
+    line-height: 22px;
+}
+
 #searchform {
 	display:none;
 }
@@ -51,12 +70,23 @@ span.ui-btn-text {
 	border-top:1px solid black;
 }
 
-#phonebutton { margin-bottom:30px; margin-top: 40px; }
+#phonebutton { 
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
 #mapbutton { margin-bottom:20px; float:right ; top:-4px; }
+
+#phonebutton,#mapbutton,#emailbutton {
+	background: url(../icons/dots-pattern.png) #5bc8ff;
+}
 
 #phonebutton span { font-size: 20px ; }
 #emailbutton span { font-size: 15px ; }
-#mapbutton span { font-size: 17px ; margin-top:-3px; }
+#mapbutton span { 
+    font-size: 17px;
+    margin-top: -3px;
+    line-height: 21px;
+}
 
 .ui-listview h4.ui-li-heading {
 
@@ -93,14 +123,20 @@ span.latestnews {
 
 .ui-page {
 
-	background-image:url(../icons/paper.jpg);
+ 	background: url(../icons/front-street-footer.png) #f4f4f4;
+    	background-repeat: no-repeat;
+    	background-position: bottom center;
+    	background-size: 225% auto;	
 }
+
+#categoryPage,#newsletterPage { background: #f4f4f4; }
+#postViewPage .ui-content,#infoViewPage .ui-content,#infoPage .ui-content { background: #f4f4f4; }
 
 
 
 #postTitle {
 
-	color: #BB242D;
+	color: #cc0000;
 	font-family: "TOONISH",Arial,Helvetica,sans-serif;
 	font-weight: normal;
 	font-size: 28px;
@@ -114,13 +150,14 @@ span.latestnews {
 
 #postDate { 
 
-	font-family: Georgia, Helvetica, sans-serif;
+	font-family: TOONISH, Helvetica, sans-serif;
 	margin: 0;
 	margin-top: 8px;
 	font-size: 16px;
 	margin-left: 20px;
 	margin-bottom: 5px;
 	color: #333;
+	font-weight:normal;
 
 }
 
@@ -162,11 +199,8 @@ span.latestnews {
 	-webkit-border-radius: .6em;
 	border-radius: .6em;
 	margin: 1em 0;
-	background-color:#f7f7f7;
 	padding: 0;
-	-webkit-background-clip: padding-box;
-	-moz-background-clip: padding;
-	background-clip: padding-box;	
+
 	
 	border-color: rgba(255, 255, 255, .3);
 	border-top: 1px solid white;
@@ -176,29 +210,19 @@ span.latestnews {
 	border-left-width: 1px;
 	border-bottom-width: 1px;	
 
-	background-image: linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
-	background-image: -o-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
-	background-image: -moz-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
-	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
-	background-image: -ms-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
-
-	background-image: -webkit-gradient(
-		linear,
-		left bottom,
-		left top,
-		color-stop(0.38, rgb(235,235,235)),
-		color-stop(1, rgb(255,255,255)),
-		color-stop(1, rgb(33,33,33))
+	background:#fff;
+	
 	);
 }
 
 #postContent {
 
-	margin: 15px;
-	font-size: 15px;	
-	font-family: Georgia, Helvetica, sans-serif;
-	line-height: 21px;
-	padding-bottom: 15px;  
+    margin: 15px;
+    font-size: 17px;
+    font-family: TOONISH;
+    line-height: 21px;
+    padding-bottom: 15px;
+    font-weight: normal;  
 }
 
 #postImage {
@@ -249,8 +273,9 @@ span.latestnews {
 }
 
 .ui-header .ui-btn {
-	
-	height: 30px;
+       height: 36px;
+       margin-top: 5px;	
+       text-shadow: none;
 }
 
 #loadingmsg {
@@ -346,7 +371,7 @@ dl.attachments {
 	background-color: #eee;
 	border: 1px solid #444;
 	border-radius: 10px;
-	color: #900;
+	color: #cc0000;
 	font-size: 12px;
 	font-family: Arial;
 	line-height: 23px;
@@ -358,7 +383,7 @@ dl.attachments {
 
 dl.attachments a {
 
-	color:#900;
+	color:#cc0000;
 	font-weight:bold;
 	text-decoration:none;
 	font-size: 13px;
@@ -379,8 +404,13 @@ div.attachments img {
 
 .ui-footer .ui-navbar .ui-btn-text {
 
-	top:3px;
-	color:#dddddd;
+    top: 3px;
+    color: #fff;
+    font-family: TOONISH;
+    font-weight: normal;
+    text-shadow: none;
+    font-size: 13px;
+    line-height: 11px;	
 
 }
 
@@ -401,24 +431,15 @@ div.attachments img {
 
 
 .ui-navbar .ui-btn-up-a {
-	background-image: linear-gradient(#555,#000);
-	background-image: -webkit-linear-gradient(#555,#000);
-	background-image: -moz-linear-gradient(#555,#000);
-	background-image: -ms-linear-gradient(#555,#000);
-	background-image: -o-linear-gradient(#555,#000);
+
+    background: #CD0C0C;
+    border-left: 1px solid #990000;
 }
 
 .ui-navbar .ui-btn-hover-a, .ui-navbar .ui-btn-active {
-	border: 1px solid #000000;
-	background-color: #3A3A3A;
-	text-shadow: 0 -1px 1px #000000;
-	background-image: linear-gradient(#666,#222);
-	background-image: -webkit-linear-gradient(#666,#222);
-	background-image: -moz-linear-gradient(#666,#222);
-	background-image: -ms-linear-gradient(#666,#222);
-	background-image: -o-linear-gradient(#666,#222);
-
-
+    background: #00A9FF;
+    border:0;
+    border-left: 1px solid #4976B9;
 
 }
 
@@ -449,10 +470,16 @@ div.attachments img {
 
 .ui-footer .ui-block-a .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-a a:active .ui-icon-custom {
 
-	background: url(../icons/schoolhatselected.png);
+	x_background: url(../icons/schoolhatselected.png);
 	background-size:30px 24px !important;	
 
 } 
+
+#postList .ui-btn-active,#categoryList .ui-btn-active,#schoolInfoList .ui-btn-active,#newsletterList .ui-btn-active {
+
+	background:#00A9FF;
+
+}
 
 .ui-footer .ui-block-b .ui-btn-inner .ui-icon-custom {
 
@@ -462,14 +489,14 @@ div.attachments img {
 	background-repeat:no-repeat;
 	background-size:29px 25px !important;
 	margin-left: -13px;
-	opacity: 0.8;
+	opacity: 1;
 	border-radius:0;
 
 }
 
 .ui-footer .ui-block-b .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-b a:active .ui-icon-custom {
 
-	background: url(../icons/newsselected.png);
+	x_background: url(../icons/newsselected.png);
 	background-size:29px 25px !important;
 
 } 
@@ -489,7 +516,7 @@ div.attachments img {
 
 .ui-footer .ui-block-c .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-c a:active .ui-icon-custom {
 
-	background: url(../icons/infoiconselected.png);
+	x_background: url(../icons/infoiconselected.png);
 	background-size:26px 26px !important;
 
 }
@@ -508,7 +535,7 @@ div.attachments img {
 
 .ui-footer .ui-block-d .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-d a:active .ui-icon-custom {
 
-	background: url(../icons/phoneselected.png);
+	x_background: url(../icons/phoneselected.png);
 	background-size:26px 26px !important;
 
 }
@@ -519,13 +546,17 @@ div.attachments img {
 }
 
 #attachments span.ui-btn-text {
+    font-size: 21px;
+    text-transform: capitalize;
+    font-family: TOONISH;
+    line-height: 19px;
+    font-weight: normal;
 	
-	font-size:13px;
-	text-transform:capitalize;
 }
 
 #attachments span.ui-btn-inner {
 	padding: .5em 25px .7em 25px;
+	background: url(../icons/dots-pattern.png) #5bc8ff;
 }
 
 #mainphoto {
@@ -541,25 +572,25 @@ div.attachments img {
 }
 
 #wrapper {
-	width:90%;
-	position:relative;	
-	z-index:1;			
-	overflow:hidden;
-	margin: auto;
-	float: none;
-	margin-top: 0;
-	height: 65px;	
-	border: 1px solid #CCC ;
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#ddd));
-	background-image: -webkit-linear-gradient(#fff,#ddd);
-	background-image: -moz-linear-gradient(#fff,#ddd);
-	background-image: -ms-linear-gradient(#fff,#ddd);
-	background-image: -o-linear-gradient(#fff,#ddd);
-	background-image: linear-gradient(#fff,#ddd);	
-	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
-	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
-	border-radius: 0px 0px 10px 10px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin: auto;
+    float: none;
+    margin-top: 0;
+    height: 65px;
+    border: 1px solid #CCC;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#ddd));
+    background-image: -webkit-linear-gradient(#fff,#ddd);
+    background-image: -moz-linear-gradient(#fff,#ddd);
+    background-image: -ms-linear-gradient(#fff,#ddd);
+    background-image: -o-linear-gradient(#fff,#ddd);
+    background: #fff;
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    box-shadow: none;
+    border-radius: 0px 0px 10px 10px;
 }
 
 #scroller {
@@ -665,18 +696,12 @@ div.attachments img {
 	margin:0;
 }
 #homepagelogo {
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#6FCBFB),to(#50C5FF));
-	background-image: -webkit-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: -moz-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: -ms-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: -o-linear-gradient(#6FCBFB,#50C5FF);
-	background-image: linear-gradient(#6FCBFB,#50C5FF);	
+	background:url(../icons/dots-pattern.png) #5bc8ff;
 	text-align:center;
 	padding-bottom: 12px;
 	padding-top: 6px;
-	-moz-box-shadow: 0 1px 4px rgba(23, 129, 179, 0.65);
-	-webkit-box-shadow: 0 1px 4px rgba(23, 129, 179, 0.65);
-	box-shadow: 0 1px 4px rgba(23, 129, 179, 0.65);
+	box-shadow: none;
+    	border-bottom: 1px solid #fff;
 }
 
 #homepagelogo img {
@@ -686,11 +711,14 @@ div.attachments img {
 	
 }
 
-#homepagecontent {
+#homepagecontent,#schoolContact .ui-content {
 
 	text-align:center;
 	padding:0;
-
+ 	background: url(../icons/front-street-footer.png);
+    	background-repeat: no-repeat;
+    	background-position: bottom center;
+    	background-size: 225% auto;
 }
 
 #latestheader {
@@ -707,14 +735,17 @@ div.attachments img {
 }
 
 #latestheader li {
-	border-radius: 10px 10px 0 0;
-	background-image: -webkit-linear-gradient(#6FCBFB, #50C5FF);
-	font-family: "TOONISH",Arial,Helvetica,sans-serif;
-	line-height: 14px;
-	font-weight: normal;
-	font-size: 17px;
-	padding-top: 9px;
-	padding-bottom: 7px;
+    border-radius: 10px 10px 0 0;
+    background: url(../icons/dots-pattern.png) #cc0000;
+    font-family: "TOONISH",Arial,Helvetica,sans-serif;
+    line-height: 14px;
+    font-weight: normal;
+    font-size: 21px;
+    padding-top: 9px;
+    padding-bottom: 7px;
+    border: 0;
+    text-shadow: none;
+    box-shadow: none;
 } 
 
 #categoryList div.ui-btn-inner,#newsletterList div.ui-btn-inner,#schoolInfoList div.ui-btn-inner {
@@ -728,26 +759,38 @@ div.attachments img {
 
 #contactinfo {
 
-	padding-botttom:60px;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #aaa;
+    margin: 20px;
+    border-radius: 14px;
+    text-align: left;
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);    
 }
 
 #refreshbutton,#backbutton,.ui-header a {
-	
+       height: 36px;
+       margin-top: 5px;	
 	border:0;
-	background: #900;
+	background: #cc0000;
 	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
+	text-shadow: none;
 }
 
-#refreshbutton {
-	margin-top: 2px;
+#refreshbutton .ui-btn-text img { 
+    margin-top: 3px;
 }
 
 .ui-page-active .ui-header a.ui-btn-active,.ui-page-active .ui-header a:active,#refreshbutton:hover {
 
-	background: #600 !important;
+	background: #00A9FF !important;
 }
 
 .ui-page-active .ui-header a.ui-btn-active span.ui-btn-inner,.ui-page-active .ui-header a:active span.ui-btn-inner,#refreshbutton:hover span.ui-btn-inner {
 	border-top: 1px solid #400;
 }
+
+li.ui-btn { opacity:0.95 !important; }
