@@ -218,11 +218,12 @@ span.latestnews {
 #postContent {
 
     margin: 15px;
-    font-size: 17px;
+    font-size: 19px;
     font-family: TOONISH;
     line-height: 21px;
     padding-bottom: 15px;
-    font-weight: normal;  
+    font-weight: normal;
+    color: #333;
 }
 
 #postImage {
