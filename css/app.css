@@ -475,9 +475,16 @@ div.attachments img {
 
 } 
 
+.ui-header .ui-btn-inner {
+	padding-top: 6px;
+}
+#refreshbutton .ui-btn-inner {
+	padding-top: 5px;
+}
+
 #postList .ui-btn-active,#categoryList .ui-btn-active,#schoolInfoList .ui-btn-active,#newsletterList .ui-btn-active {
 
-	background:#00A9FF;
+	background:#5BC8FF;
 
 }
 
