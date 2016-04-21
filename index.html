@@ -36,6 +36,7 @@
 			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b ui-corner-top">Latest</li>
 			</ul>
 
+
 			<div id="wrapper" onmousedown="doScroll()">
 				<div id="scroller">
 					<ul id="latestList"></ul>
@@ -52,6 +53,9 @@
 				</ul>
 			</div>
 		</div>
+
+		<a id="set_notifications" href="settings.html" data-icon="custom" data-role="button" data-theme="b" data-prefetch data-transition="none">Notifications</a>
+
 
       </div>
 
@@ -84,8 +88,8 @@
 				if(window.localStorage.getItem("registered") == 1){
 					}else{
 				function onConfirm(buttonIndex) {
-				if(buttonIndex==2){
-					document.location.href = "settings.html";
+				if(buttonIndex==1){
+					setTimeout("$('#set_notifications').trigger('click')",200);
 				}
 			}
 
@@ -93,7 +97,7 @@
 				'Notifications are currently off. Please choose some categories.',
 				onConfirm,
 				'Notifications',
-				['Cancel','Select']
+				['OK']
 			);
 			}
 			}

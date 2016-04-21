@@ -548,6 +548,18 @@ div.attachments img {
 
 }
 
+#set_notifications .ui-icon-custom {
+
+	width: 26px;
+	height: 26px;
+	background: url(../icons/bell.png);
+	background-repeat:no-repeat;
+	background-size:26px 26px !important;
+	margin-top: -14px;
+        background-position: 50% 50%;
+        box-shadow: none;
+}
+
 
 #attachments {
 	margin-top:20px;
