@@ -30,6 +30,7 @@
 		<h3>Notification Categories</h3>
 		<p>Please select the year groups you're interested in. You'll get a notification on your device when we post relevant updates.</p>
 		<div id="checkboxes" name="checkboxes">
+			<div id="nocategoryconn">Sorry, can't set categories at the moment. Please try later over Wi-Fi.</div>
 		</div>
 		<div>
 		 <button type="button" data-role="button" data-theme="b" id="submit">Save Choices</button>
@@ -74,6 +75,7 @@
 						document.getElementById(json.items[i].slug).checked = false;
 					}
 				}
+				$("#nocategoryconn").hide();
 			});
 
 
