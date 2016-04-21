@@ -27,11 +27,12 @@
       </div>
 
       <div data-role="content" data-iscroll>
-		<h1>Settings</h1>
+		<h3>Notification Categories</h3>
+		<p>Please select the year groups you're interested in. You'll get a notification on your device when we post relevant updates.</p>
 		<div id="checkboxes" name="checkboxes">
 		</div>
 		<div>
-		 <button type="button" id="submit">Submit</button>
+		 <button type="button" data-role="button" data-theme="b" id="submit">Save Choices</button>
 		</div>
         <div class="clear"></div>
       </div>
@@ -65,7 +66,7 @@
 				console.log(json.items[i].name);
 
 				var node = document.createElement('div');
-				node.innerHTML = '<input type="checkbox" id="' + json.items[i].slug + '" name="check' + i + '"><label for="check' + i + '">'+ json.items[i].name; +'</label>';
+				node.innerHTML = '<input type="checkbox" id="' + json.items[i].slug + '" name="' + json.items[i].slug + '"><label for="' + json.items[i].slug + '">'+ json.items[i].name; +'</label>';
 				document.getElementById( 'checkboxes' ).appendChild(node);
 					if(window.localStorage.getItem(json.items[i].slug) == 1){
 						document.getElementById(json.items[i].slug).checked = true;
