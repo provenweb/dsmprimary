@@ -140,7 +140,13 @@ span.latestnews {
 
 	width:50%;
 	float:left;
+}
 
+#settingsPage #checkboxes div:first-child {
+    width: 100%;
+    border-bottom: 1px solid #c8c8c8;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 #settingsPage #checkboxes input {
@@ -599,13 +605,14 @@ div.attachments img {
 
 #set_notifications .ui-btn-inner,#settingsPage .ui-content .ui-btn .ui-btn-inner {
 	height: 21px;
+	border-radius: 10px;
 }
 
 #set_notifications span.ui-btn-text,#settingsPage .ui-content .ui-btn span.ui-btn-text {
     font-size: 19px;
     font-family: TOONISH;
     font-weight: normal;
-    margin-left: 12px;
+    margin-left: 9px;
     line-height: 19px;
 }
 
