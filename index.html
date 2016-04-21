@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     <title>Front Street Primary School</title>
     <link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css"/>
     <link rel="stylesheet" href="css/app.css"/>
@@ -61,6 +62,7 @@
             <li><a id="navbutton2" href="newsletter.html" data-icon="custom" data-prefetch data-transition="none">Newsletter</a></li>
             <li><a id="navbutton3" href="schoolinfo.html" data-icon="custom" data-prefetch data-transition="none">School Info</a></li>
             <li><a id="navbutton4" href="contact.html" data-icon="custom" data-prefetch data-transition="none">Contact</a></li>
+			<li><a id="navbutton5" href="settings.html" data-icon="custom" data-prefetch data-transition="none">Settings</a></li>
           </ul>
         </div>
       </div>
@@ -69,6 +71,33 @@
 			var myScroll;
 			var scrollcounter;
 			var hasScrolled;
+			var hasScrolled;
+
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			function onDeviceReady(){
+				navigate();
+			}
+
+			function navigate(){
+				console.log("Navigate to settings");
+				if(window.localStorage.getItem("registered") == 1){
+					}else{
+				function onConfirm(buttonIndex) {
+				if(buttonIndex==2){
+					document.location.href = "settings.html";
+				}
+			}
+
+			navigator.notification.confirm(
+				'Notifications are currently off. Please choose some categories.',
+				onConfirm,
+				'Notifications',
+				['Cancel','Select']
+			);
+			}
+			}
+
 			$("#homepage").live('pageshow', function() {
 				var randomnum = Math.floor(Math.random() * 6) + 1
 				$("#mainphoto").attr('src',"photos/"+randomnum+".jpg")

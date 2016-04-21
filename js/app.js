@@ -15,7 +15,26 @@ var connectionType = "notReady";
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+	oneSignal();
 	checkConnection();
+}
+
+function oneSignal(){
+	console.log("It is calling");
+		var notificationOpenedCallback = function(jsonData) {
+			console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+			console.log(jsonData.additionalData.url);
+			window.location = jsonData.additionalData.url;
+			getNewsletters();
+		};
+
+		window.plugins.OneSignal.init("e186e7ab-7a79-49db-a001-f28bc4d58809",
+                                 {googleProjectNumber: "176978804568"},
+                                 notificationOpenedCallback);
+
+  // Show an alert box if a notification comes in when the user is in your app.
+		window.plugins.OneSignal.enableInAppAlertNotification(true);
+		console.log("initialized");
 }
 
 function checkConnection() {

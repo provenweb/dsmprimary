@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang-"en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Front Street Primary School - Settings</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="js/jquery.actual.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/iscroll-watusi.js"></script>
+    <script src="js/jquery.mobile.iscrollview.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+
+  </head>
+
+  <body>
+    <div id="schoolContact" data-role="page" data-dom-cache="true">
+
+      <div data-role="header" data-theme="b" data-position="fixed">
+        <h1>Settings</h1>
+        <a href="index.html" data-prefetch data-theme="a" data-transition="none" data-icon="home" class="ui-btn-left">Home</a>
+      </div>
+
+      <div data-role="content" data-iscroll>
+		<h1>Settings</h1>
+		<div id="checkboxes" name="checkboxes">
+		</div>
+		<div>
+		 <button type="button" id="submit">Submit</button>
+		</div>
+        <div class="clear"></div>
+      </div>
+
+      <div data-role="footer" class="ui-bar" data-position="inline" id="my-persistent-footer">
+        <div data-role="navbar" class="ui-navbar">
+          <ul class="ui-grid-b">
+            <li><a id="navbutton1" href="categories.html" data-icon="custom" data-prefetch data-transition="none">Classes</a></li>
+            <li><a id="navbutton2" href="newsletter.html" data-icon="custom" data-prefetch data-transition="none">Newsletter</a></li>
+            <li><a id="navbutton3" href="schoolinfo.html" data-icon="custom" data-prefetch data-transition="none">School Info</a></li>
+            <li><a id="navbutton4" href="contact.html" data-icon="custom" data-prefetch data-transition="none">Contact</a></li>
+			<li><a id="navbutton5" href="settings.html" data-icon="custom" data-prefetch data-transition="none" class="ui-btn-active">Settings</a></li>
+		  </ul>
+        </div>
+      </div>
+	  <script type="text/javascript">
+			$("#schoolContact").live('pageshow', function() {
+				setTimeout("setButton(5)",200);
+				$(".ui-page-active div.ui-content").iscrollview();
+			});
+
+	  </script>
+
+	  <script>
+	  var taglist = {};
+	  var url = "http://www.frontstreetprimary.co.uk/mobile/api/getallcategories.php";
+			$.getJSON(url, function(json) {
+				console.log(json);
+				console.log(json.items.length);
+
+				for(var i=0;i<json.items.length;i++){
+
+				console.log(json.items[i].name);
+
+				var node = document.createElement('div');
+				node.innerHTML = '<input type="checkbox" id="' + json.items[i].slug + '" name="check' + i + '"><label for="check' + i + '">'+ json.items[i].name; +'</label>';
+				document.getElementById( 'checkboxes' ).appendChild(node);
+					if(window.localStorage.getItem(json.items[i].slug) == 1){
+						document.getElementById(json.items[i].slug).checked = true;
+					}else{
+						document.getElementById(json.items[i].slug).checked = false;
+					}
+				}
+			});
+
+
+			document.getElementById("submit").addEventListener("click", function(){
+
+			var selected = [];
+			var notselected = [];
+
+			$('#checkboxes input:checkbox:not(:checked)').each(function() {
+				notselected.push($(this).attr('id'));
+				window.localStorage.setItem($(this).attr('id'), 0);
+				console.log(notselected);
+			});
+
+			$('#checkboxes input:checked').each(function() {
+				selected.push($(this).attr('id'));
+				window.localStorage.setItem($(this).attr('id'), 1);
+				console.log(selected);
+			});
+			console.log("taglist before "+taglist);
+			for(var n = 0; n < selected.length;n++){
+					taglist[selected[n]]= "true";
+			}
+
+			console.log("taglist after "+taglist);
+			window.plugins.OneSignal.init("e186e7ab-7a79-49db-a001-f28bc4d58809",
+                               {googleProjectNumber: "176978804568",
+                                autoRegister: false});
+
+		window.plugins.OneSignal.sendTags(taglist);
+		window.localStorage.setItem("registered", 1);
+		window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+		window.plugins.OneSignal.deleteTags(notselected);
+		});
+	  </script>
+    </div>
+  </body>
+</html>

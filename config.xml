@@ -12,12 +12,33 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="com.phonegap.plugin.statusbar" />
+	<gap:plugin name="org.apache.cordova.dialogs" />
+	<gap:plugin name="onesignal-cordova-plugin" source="npm" />
+	<plugin name="nl.x-services.plugins.toast" spec="2.0" source="pgb" />
+	<plugin name="cordova-plugin-whitelist" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
+	
+	<feature name="Notification">
+    <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+	</feature>
+	
+	<feature name="Notification">
+    <param name="ios-package" value="CDVNotification" />
+	</feature>
+
+	
+	
+	<allow-navigation href="*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<access origin="*" />
     
-    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="phonegap-version" value="cli-5.4.1" />
+	<preference name="android-build-tool" value="gradle" />
+	<preference name="ios-statusbarstyle" value="black-opaque" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />  
@@ -32,7 +53,6 @@
     <preference name="fullscreen" value="false" />
     <preference name="orientation" value="portrait" />
     <preference name="permissions" value="none" />
-    <preference name="phonegap-version" value="3.7.0" />
     <preference name="SplashScreen" value="splash" />
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="stay-in-webview" value="false" />
