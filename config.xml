@@ -59,6 +59,7 @@
     <preference name="stay-in-webview" value="false" />
     <preference name="target-device" value="universal" />
     <preference name="webviewbounce" value="false" /> 
+    <preference name="FadeSplashScreen" value="false"/>
     
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
