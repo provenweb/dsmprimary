@@ -135,8 +135,8 @@ function getInfoList() {
 					'<h4>' + page.post_title + '</h4></a></li>');
 		});
 
-		$('#schoolInfoList').append('<li><a href="posts.html?id=clubs&return=schoolinfo.html&title=Sports%20%26%20Clubs"><h4>Sports &amp; Clubs</h4></a></li>');
-		$('#schoolInfoList').append('<li><a href="posts.html?id=events&return=schoolinfo.html&title=Events"><h4>Fundraising &amp; Events</h4></a></li>');
+		//$('#schoolInfoList').append('<li><a href="posts.html?id=clubs&return=schoolinfo.html&title=Sports%20%26%20Clubs"><h4>Sports &amp; Clubs</h4></a></li>');
+		//$('#schoolInfoList').append('<li><a href="posts.html?id=events&return=schoolinfo.html&title=Events"><h4>Fundraising &amp; Events</h4></a></li>');
 
 		$('#schoolInfoList').listview('refresh');
 		$(".ui-page div.ui-content").iscrollview();
