@@ -895,14 +895,14 @@ li.ui-btn { opacity:0.95 !important; }
     background: #CD0C0C;
 }
 
-#settingsPage .ui-btn-hover-b,#settingsPage .ui-btn:hover,#settingsPage .ui-btn:active {
+#settingsPage .ui-btn:hover {
     background: #CD0C0C;
 }
 
 @media screen and (max-width: 339px) {
 
 	#contactinfo h3 {
-    		font-size: 23px;
+    		font-size: 22px;
 	}
 
 }
