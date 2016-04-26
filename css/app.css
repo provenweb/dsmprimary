@@ -891,6 +891,22 @@ div.attachments img {
 
 li.ui-btn { opacity:0.95 !important; }
 
+#set_notifications:hover,#set_notifications:active {
+    background: #CD0C0C;
+}
+
+#settingsPage .ui-btn-hover-b,#settingsPage .ui-btn:hover,#settingsPage .ui-btn:active {
+    background: #CD0C0C;
+}
+
+@media screen and (max-width: 339px) {
+
+	#contactinfo h3 {
+    		font-size: 23px;
+	}
+
+}
+
 @media screen and (max-height: 505px) {
 
 	#nav {
@@ -904,10 +920,15 @@ li.ui-btn { opacity:0.95 !important; }
 
 	#set_notifications span.ui-btn-text {
 	    line-height: 15px;
-	    font-size: 18px;
+	    font-size: 19px;
 	}
 	#set_notifications .ui-btn-inner {
 	    height: 17px;
+	    margin-top: -2px;
+	}
+
+	#set_notifications .ui-icon-custom {
+	    margin-top: -12px;
 	}
 
 	#homepagelogo {
