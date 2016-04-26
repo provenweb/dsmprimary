@@ -890,3 +890,65 @@ div.attachments img {
 }
 
 li.ui-btn { opacity:0.95 !important; }
+
+@media screen and (max-height: 505px) {
+
+	#nav {
+	    display: none;
+	}
+
+	#set_notifications {
+	    height: 35px;
+	    margin-top: 8px;
+	}
+
+	#set_notifications span.ui-btn-text {
+	    line-height: 15px;
+	    font-size: 18px;
+	}
+	#set_notifications .ui-btn-inner {
+	    height: 17px;
+	}
+
+	#homepagelogo {
+	    padding-bottom: 4px;
+	    padding-top: 0px;
+	}
+
+	#latestheader li {
+	    line-height: 9px;
+	    font-size: 15px;
+	    padding-top: 5px;
+	    padding-bottom: 6px;
+	}
+
+	#wrapper {
+	    height: 60px;
+	}
+	
+	#settingsPage h3 {
+	    margin-top: 3px;
+	    margin-bottom: 5px;
+	}
+	
+	#settingsPage p {
+	    font-size: 18px;
+	    line-height: 19px;
+	}
+
+	#settingsPage #checkboxes {
+	    padding-top: 7px;
+	    padding-bottom: 9px;
+	}
+
+	#settingsPage .ui-content .ui-btn {
+	    margin-top: 10px;
+	    height: 35px;
+	}
+
+	#settingsPage .ui-content .ui-btn .ui-btn-inner {
+	    height: 21px;
+	    padding-top: 7px;
+	}
+
+}
