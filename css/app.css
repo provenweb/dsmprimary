@@ -899,9 +899,9 @@ li.ui-btn { opacity:0.95 !important; }
     background: #CD0C0C;
 }
 
-.ui-listview .ui-li .ui-btn-text { height: 100%; }
-.ui-listview .ui-li .ui-btn-text a.ui-link-inherit { height: 100%; display: flex; width: 100%; padding-top:0 !important; padding-bottom:0 !important; }
-.ui-listview .ui-li .ui-btn-text a h4.ui-li-heading { margin-top: auto; margin-bottom: auto; height: 18px; width: 100%; }
+xx_.ui-listview .ui-li .ui-btn-text { height: 100%; }
+xx_.ui-listview .ui-li .ui-btn-text a.ui-link-inherit { height: 100%; display: flex; width: 100%; padding-top:0 !important; padding-bottom:0 !important; }
+xx_.ui-listview .ui-li .ui-btn-text a h4.ui-li-heading { margin-top: auto; margin-bottom: auto; height: 18px; width: 100%; }
 
 
 @media screen and (max-width: 339px) {
