@@ -169,7 +169,7 @@ span.latestnews {
 
 .ui-page,#settingsPage .ui-content {
 
- 	background: url(../icons/front-street-footer.png) #f4f4f4;
+ 	background: url(../icons/footer.png) #f4f4f4;
     	background-repeat: no-repeat;
     	background-position: bottom center;
     	background-size: 225% auto;	
@@ -811,7 +811,7 @@ div.attachments img {
 
 	text-align:center;
 	padding:0;
- 	background: url(../icons/front-street-footer.png);
+ 	background: url(../icons/footer.png);
     	background-repeat: no-repeat;
     	background-position: bottom center;
     	background-size: 225% auto;

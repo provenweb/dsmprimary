@@ -1,4 +1,4 @@
-var siteURL = "http://www.frontstreetprimary.co.uk";
+var siteURL = "http://www.hebburnlakes.co.uk";
 var apiPath = "/mobile/api/";
 var postPath = "/news/age/";
 var latestPath = "/latest/";
