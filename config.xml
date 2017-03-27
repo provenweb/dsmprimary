@@ -11,7 +11,7 @@
     <gap:plugin name="org.apache.cordova.device" source="npm" />
     <gap:plugin name="org.apache.cordova.network-information" source="npm" />
     <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
-    <gap:plugin name="com.phonegap.plugin.statusbar" source="npm" />
+    <plugin spec="https://github.com/phonegap-build/StatusBarPlugin.git" source="git" />
     <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
     <plugin name="nl.x-services.plugins.toast" spec="2.0" source="npm" />
