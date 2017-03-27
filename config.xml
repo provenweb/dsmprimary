@@ -14,7 +14,7 @@
     <gap:plugin name="com.phonegap.plugin.statusbar" source="npm" />
     <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
-    <plugin name="nl.x-services.plugins.toast" spec="2.0" source="pgb" />
+    <plugin name="nl.x-services.plugins.toast" spec="2.0" source="npm" />
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-splashscreen" />
 
