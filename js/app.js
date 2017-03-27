@@ -1,8 +1,8 @@
-var siteURL = "http://www.hebburnlakes.co.uk";
+var siteURL = "http://api.hebburnlakes.co.uk";
 var apiPath = "/mobile/api/";
 var postPath = "/news/age/";
 var latestPath = "/latest/";
-var pagePath = "/school-information/";
+var pagePath = "/school/";
 var imgPath = "/wp-content/uploads/";
 
 var categories;
@@ -139,6 +139,24 @@ function getInfoList() {
 		//$('#schoolInfoList').append('<li><a href="posts.html?id=events&return=schoolinfo.html&title=Events"><h4>Fundraising &amp; Events</h4></a></li>');
 
 		$('#schoolInfoList').listview('refresh');
+		$(".ui-page div.ui-content").iscrollview();
+
+	}).error(function(error){
+        console.log(error.responseText);
+    });
+}
+function getParentList() {
+    var URL = siteURL + apiPath + 'getparentlist.php?api=1';
+
+	$.getJSON(URL, function(data) {
+		$('#parentList li').remove();
+		infoPages = data.items;
+        $.each(infoPages, function(index, page) {
+			$('#parentList').append('<li><a href="viewpage.html?id=' + page.post_name + '">' +
+					'<h4>' + page.post_title + '</h4></a></li>');
+		});
+
+		$('#parentList').listview('refresh');
 		$(".ui-page div.ui-content").iscrollview();
 
 	}).error(function(error){

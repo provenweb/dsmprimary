@@ -69,6 +69,7 @@
 				currentPage = $(event.target);
 				theTarget = event.target;
 				$.getJSON(siteURL + pagePath + urlvars["id"] + '?api=1', getSinglePage);
+				alert(siteURL + pagePath + urlvars["id"] + '?api=1');
 				currentPage.attr('pagename', urlvars["id"]);
 
 			});
