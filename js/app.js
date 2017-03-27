@@ -152,7 +152,7 @@ function getParentList() {
 		$('#parentList li').remove();
 		infoPages = data.items;
         $.each(infoPages, function(index, page) {
-			$('#parentList').append('<li><a href="viewpage.html?id=' + page.post_name + '">' +
+			$('#parentList').append('<li><a href="viewparent.html?id=' + page.post_name + '">' +
 					'<h4>' + page.post_title + '</h4></a></li>');
 		});
 
