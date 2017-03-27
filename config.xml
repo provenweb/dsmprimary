@@ -14,7 +14,7 @@
     <plugin spec="https://github.com/phonegap-build/StatusBarPlugin.git" source="git" />
     <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
     <gap:plugin name="onesignal-cordova-plugin" source="npm" />
-    <plugin name="nl.x-services.plugins.toast" spec="2.0" source="npm" />
+    <gap:plugin name="cordova-plugin-x-toast" source="npm" />
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-splashscreen" />
 
