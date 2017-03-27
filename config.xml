@@ -8,15 +8,15 @@
 		Proven Web
     </author>
 
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
-	<gap:plugin name="org.apache.cordova.dialogs" />
-	<gap:plugin name="onesignal-cordova-plugin" source="npm" />
-	<plugin name="nl.x-services.plugins.toast" spec="2.0" source="npm" />
-	<plugin name="cordova-plugin-whitelist" />
-	<plugin name="cordova-plugin-splashscreen" />
+    <gap:plugin name="org.apache.cordova.device" source="npm" />
+    <gap:plugin name="org.apache.cordova.network-information" source="npm" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" source="npm" />
+    <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
+    <gap:plugin name="onesignal-cordova-plugin" source="npm" />
+    <plugin name="nl.x-services.plugins.toast" spec="2.0" source="pgb" />
+    <plugin name="cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-splashscreen" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
