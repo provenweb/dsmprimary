@@ -12,8 +12,8 @@
     <gap:plugin name="org.apache.cordova.network-information" source="npm" />
     <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
     <plugin spec="https://github.com/phonegap-build/StatusBarPlugin.git" source="git" />
+    <plugin spec="https://github.com/OneSignal/OneSignal-Cordova-SDK.git" source="git" />    
     <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
-    <gap:plugin name="onesignal-cordova-plugin" source="npm" />
     <gap:plugin name="cordova-plugin-x-toast" source="npm" />
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-splashscreen" />
