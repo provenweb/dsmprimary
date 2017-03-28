@@ -49,13 +49,21 @@
         </div>
       </div>
 	  <script type="text/javascript">
-			$("#settingsPage").live('pageshow', function() {
-				$(".ui-page-active div.ui-content").iscrollview();
-			});
 
-	  </script>
+window.addEventListener("error", handleError, true);
 
-	  <script>
+function handleError(evt) {
+    if (evt.message) { // Chrome sometimes provides this
+      alert("error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename);
+    } else {
+      alert("error: "+evt.type+" from element: "+(evt.srcElement || evt.target));
+    }
+}
+
+	  $("#settingsPage").live('pageshow', function() {
+		  $(".ui-page-active div.ui-content").iscrollview();
+	  });
+
 	  var taglist = {};
 	  var url = "http://api.hebburnlakes.co.uk/mobile/api/getallcategories.php";
 			$.getJSON(url, function(json) {
@@ -102,11 +110,21 @@
 			}
 			//OneSignal
 			alert("initialising OneSignal... ("+strTags+")");
+
+
+			try {
+
 			window.plugins.OneSignal.init("da9f0bb8-6b47-4b9c-ad6d-d85fcb67c614",
                                {googleProjectNumber: "1031003525323",
                                 autoRegister: false});
 
-			alert("Success, now running sendTags...");
+			}
+			catch(err) {
+				alert(err.message);
+			}
+
+
+			alert("Now running sendTags...");
 			window.plugins.OneSignal.sendTags(taglist);
 			window.localStorage.setItem("registered", 1);
 			window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
