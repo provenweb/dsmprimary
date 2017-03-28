@@ -59,12 +59,12 @@
 	  var taglist = {};
 	  var url = "http://api.hebburnlakes.co.uk/mobile/api/getallcategories.php";
 			$.getJSON(url, function(json) {
-				console.log(json);
-				console.log(json.items.length);
+				alert(json);
+				alert(json.items.length);
 
 				for(var i=0;i<json.items.length;i++){
 
-				console.log(json.items[i].name);
+				alert(json.items[i].name);
 
 				var node = document.createElement('div');
 				node.innerHTML = '<input type="checkbox" id="' + json.items[i].slug + '" name="' + json.items[i].slug + '"><label for="' + json.items[i].slug + '">'+ json.items[i].name; +'</label>';
@@ -100,7 +100,7 @@
 					taglist[selected[n]]= "true";
 			}
 			//OneSignal
-			console.log("taglist after "+taglist);
+			alert("taglist after "+taglist);
 			window.plugins.OneSignal.init("da9f0bb8-6b47-4b9c-ad6d-d85fcb67c614",
                                {googleProjectNumber: "1031003525323",
                                 autoRegister: false});
