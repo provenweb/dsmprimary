@@ -95,19 +95,19 @@
 				window.localStorage.setItem($(this).attr('id'), 1);
 				//console.log(selected);
 			});
-			console.log("taglist before "+taglist);
+			strTags="";
 			for(var n = 0; n < selected.length;n++){
 					taglist[selected[n]]= "true";
+					strTags+=selected[n]+"|";
 			}
 			//OneSignal
-			alert("sending taglist:"+taglist.toString());
+			alert("initialising OneSignal... ("+strTags+")");
 			window.plugins.OneSignal.init("da9f0bb8-6b47-4b9c-ad6d-d85fcb67c614",
                                {googleProjectNumber: "1031003525323",
                                 autoRegister: false});
 
-			alert("sending taglist:"+taglist.toString());
-			result = window.plugins.OneSignal.sendTags(taglist);
-			alert("result="+result);
+			alert("Success, now running sendTags...");
+			window.plugins.OneSignal.sendTags(taglist);
 			window.localStorage.setItem("registered", 1);
 			window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
 			window.plugins.OneSignal.deleteTags(notselected);
