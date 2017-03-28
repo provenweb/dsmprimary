@@ -50,8 +50,8 @@
       </div>
 	  <script type="text/javascript">
 
-window.addEventListener("error", handleError, true);
-
+	//  Uncomment this to show all Javascript errors as alerts in the browser, to help mobile debugging
+	//  window.addEventListener("error", handleError, true);
 	//	function handleError(evt) {
 	//		if (evt.message) { // Chrome sometimes provides this
 	//		  alert("error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename);
@@ -109,7 +109,6 @@ window.addEventListener("error", handleError, true);
                                {googleProjectNumber: "1031003525323",
                                 autoRegister: false});
 
-			}
 			window.plugins.OneSignal.sendTags(taglist);
 			window.localStorage.setItem("registered", 1);
 			window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){console.log('toast error: ' + b)});
