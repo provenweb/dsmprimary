@@ -57,7 +57,7 @@
 
 	  <script>
 	  var taglist = {};
-	  var url = "http://hebburnlakes.co.uk/mobile/api/getallcategories.php";
+	  var url = "http://api.hebburnlakes.co.uk/mobile/api/getallcategories.php";
 			$.getJSON(url, function(json) {
 				console.log(json);
 				console.log(json.items.length);
@@ -101,8 +101,8 @@
 			}
 
 			console.log("taglist after "+taglist);
-			window.plugins.OneSignal.init("e186e7ab-7a79-49db-a001-f28bc4d58809",
-                               {googleProjectNumber: "176978804568",
+			window.plugins.OneSignal.init("da9f0bb8-6b47-4b9c-ad6d-d85fcb67c614",
+                               {googleProjectNumber: "1031003525323",
                                 autoRegister: false});
 
 		window.plugins.OneSignal.sendTags(taglist);
