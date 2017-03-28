@@ -59,12 +59,12 @@
 	  var taglist = {};
 	  var url = "http://api.hebburnlakes.co.uk/mobile/api/getallcategories.php";
 			$.getJSON(url, function(json) {
-				alert(json);
-				alert(json.items.length);
+				//alert(json);
+				//alert(json.items.length);
 
 				for(var i=0;i<json.items.length;i++){
 
-				alert(json.items[i].name);
+				//alert(json.items[i].name);
 
 				var node = document.createElement('div');
 				node.innerHTML = '<input type="checkbox" id="' + json.items[i].slug + '" name="' + json.items[i].slug + '"><label for="' + json.items[i].slug + '">'+ json.items[i].name; +'</label>';
@@ -87,28 +87,29 @@
 			$('#checkboxes input:checkbox:not(:checked)').each(function() {
 				notselected.push($(this).attr('id'));
 				window.localStorage.setItem($(this).attr('id'), 0);
-				console.log(notselected);
+				//console.log(notselected);
 			});
 
 			$('#checkboxes input:checked').each(function() {
 				selected.push($(this).attr('id'));
 				window.localStorage.setItem($(this).attr('id'), 1);
-				console.log(selected);
+				//console.log(selected);
 			});
 			console.log("taglist before "+taglist);
 			for(var n = 0; n < selected.length;n++){
 					taglist[selected[n]]= "true";
 			}
 			//OneSignal
-			alert("taglist after "+taglist);
 			window.plugins.OneSignal.init("da9f0bb8-6b47-4b9c-ad6d-d85fcb67c614",
                                {googleProjectNumber: "1031003525323",
                                 autoRegister: false});
 
-		window.plugins.OneSignal.sendTags(taglist);
-		window.localStorage.setItem("registered", 1);
-		window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-		window.plugins.OneSignal.deleteTags(notselected);
+			alert("sending taglist:"+taglist.toString());
+			result = window.plugins.OneSignal.sendTags(taglist);
+			alert("result="+result);
+			window.localStorage.setItem("registered", 1);
+			window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
+			window.plugins.OneSignal.deleteTags(notselected);
 		});
 	  </script>
     </div>
