@@ -1,41 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.instantapps.hebburnlakes" version="1.8.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Hebburn Lakes</name>
-    <description>
-		Hebburn Lakes Primary School
-    </description>    
-    <author email="sales@provenweb.co.uk" href="http://www.provenweb.co.uk">
-		Proven Web
-    </author>
+    <description>Hebburn Lakes Primary School</description>    
+    <author email="sales@provenweb.co.uk" href="http://www.provenweb.co.uk">Proven Web</author>
 
-    <gap:plugin name="org.apache.cordova.device" source="npm" />
-    <gap:plugin name="org.apache.cordova.network-information" source="npm" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
+    <plugin name="org.apache.cordova.device" source="npm" />
+    <plugin name="org.apache.cordova.network-information" source="npm" />
+    <plugin name="org.apache.cordova.inappbrowser" source="npm" />
     <plugin spec="https://github.com/phonegap-build/StatusBarPlugin.git" source="git" />
-    <gap:plugin name="org.apache.cordova.dialogs" source="npm" />
-    <gap:plugin name="onesignal-cordova-plugin" source="npm" version="1.13.1" />
-    <gap:plugin name="cordova-plugin-x-toast" source="npm" />
+    <plugin name="org.apache.cordova.dialogs" source="npm" />
+    <plugin name="onesignal-cordova-plugin" source="npm" version="1.13.1" />
+    <plugin name="cordova-plugin-x-toast" source="npm" />
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-splashscreen" />
 
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
-	
-	<feature name="Notification">
-    <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
-	</feature>
-	
-	<feature name="Notification">
-    <param name="ios-package" value="CDVNotification" />
-	</feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
 
-	
-	
-	<allow-navigation href="*" />
-	<allow-intent href="http://*/*" />
-	<allow-intent href="https://*/*" />
-	<access origin="*" />
+    <allow-navigation href="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <access origin="*" />
     
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="android-build-tool" value="gradle" />
@@ -61,31 +53,43 @@
     <preference name="webviewbounce" value="false" /> 
     <preference name="FadeSplashScreen" value="false"/>
     
-    <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
-    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
-    <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
-    <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
-    <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
-    <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
-    
-    <icon src="res/icon/ios/icon-76.png"          gap:platform="ios"        width="76" height="76" />
-    <icon src="res/icon/ios/icon-120.png"         gap:platform="ios"        width="120" height="120" />
-    <icon src="res/icon/ios/icon-152.png"         gap:platform="ios"        width="152" height="152" />
 
-    <gap:splash src="res/screen/android/screen-600-1024-portrait.png"   gap:platform="android" width="600" height="1024" />
-    <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
-    <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
-    <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
-    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
-       
-    <gap:splash src="res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
-    <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="res/screen/ios/screen-ipad-portrait-2x.png"        gap:platform="ios"     width="1536" height="2008" />
+    <icon platform="ios" width="180" height="180" src="res/icon/ios/icon-180.png" /> 
+    <icon platform="ios" width="167" height="167" src="res/icon/ios/icon-167.png" /> 
+    <icon platform="ios" width="152" height="152" src="res/icon/ios/icon-152.png" />
+    <icon platform="ios" width="144" height="144" src="res/icon/ios/icon-144.png" />
+    <icon platform="ios" width="120" height="120" src="res/icon/ios/icon-120.png" />
+    <icon platform="ios" width="114" height="114" src="res/icon/ios/icon-114.png" />
+    <icon platform="ios" width="100" height="100" src="res/icon/ios/icon-100.png" />
+    <icon platform="ios" width="87"  height="87"  src="res/icon/ios/icon-87.png"  />
+    <icon platform="ios" width="80"  height="80"  src="res/icon/ios/icon-80.png"  />
+    <icon platform="ios" width="76"  height="76"  src="res/icon/ios/icon-76.png"  />
+    <icon platform="ios" width="72"  height="72"  src="res/icon/ios/icon-72.png"  />
+    <icon platform="ios" width="60"  height="60"  src="res/icon/ios/icon-60.png"  />
+    <icon platform="ios" width="58"  height="58"  src="res/icon/ios/icon-58.png"  />
+    <icon platform="ios" width="57"  height="57"  src="res/icon/ios/icon-57.png"  />
+    <icon platform="ios" width="50"  height="50"  src="res/icon/ios/icon-50.png"  />
+    <icon platform="ios" width="40"  height="40"  src="res/icon/ios/icon-40.png"  />
+    <icon platform="ios" width="29"  height="29"  src="res/icon/ios/icon-29.png"  />   
+    
+    <icon platform="android" src="res/icon/android/icon-36-ldpi.png"  qualifier="ldpi" />
+    <icon platform="android" src="res/icon/android/icon-48-mdpi.png"  qualifier="mdpi" />
+    <icon platform="android" src="res/icon/android/icon-72-hdpi.png"  qualifier="hdpi" />
+    <icon platform="android" src="res/icon/android/icon-96-xhdpi.png" qualifier="xhdpi" />
+
+    <splash platform="ios" width="1536" height="2048" src="res/screen/ios/screen-1536-2048.png" />
+    <splash platform="ios" width="1242" height="2208" src="res/screen/ios/screen-1242-2208.png" />
+    <splash platform="ios" width="768"  height="1024" src="res/screen/ios/screen-768-1024.png" />
+    <splash platform="ios" width="750"  height="1334" src="res/screen/ios/screen-750-1334.png" />
+    <splash platform="ios" width="640"  height="1136" src="res/screen/ios/screen-640-1136.png" />
+    <splash platform="ios" width="640"  height="960"  src="res/screen/ios/screen-640-960.png" />
+    <splash platform="ios" width="320"  height="480"  src="res/screen/ios/screen-320-480.png" />
+      
+    <splash platform="android" src="res/screen/android/screen-600-1024-portrait.png" width="600" height="1024" />
+    <splash platform="android" src="res/screen/android/screen-ldpi-portrait.png" qualifier="port-ldpi" />
+    <splash platform="android" src="res/screen/android/screen-mdpi-portrait.png" qualifier="port-mdpi" />
+    <splash platform="android" src="res/screen/android/screen-hdpi-portrait.png" qualifier="port-hdpi" />
+    <splash platform="android" src="res/screen/android/screen-xhdpi-portrait.png" qualifier="port-xhdpi" />       
     
 </widget>
