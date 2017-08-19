@@ -28,8 +28,8 @@ function oneSignal(){
 			getNewsletters();
 		};
 
-		window.plugins.OneSignal.init("e186e7ab-7a79-49db-a001-f28bc4d58809",
-                                 {googleProjectNumber: "176978804568"},
+		window.plugins.OneSignal.init("7a487d7a-cf87-43b7-a4bb-c02c09a2cbaf",
+                                 {googleProjectNumber: "580978998512"},
                                  notificationOpenedCallback);
 
   // Show an alert box if a notification comes in when the user is in your app.
