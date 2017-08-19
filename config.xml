@@ -4,8 +4,9 @@
     <description>Dunmow St Marys Primary School</description>    
     <author email="sales@provenweb.co.uk" href="http://www.provenweb.co.uk">Proven Web</author>
   
-    <plugin spec="https://github.com/apache/cordova-plugin-device.git" source="git" />    
-    <plugin name="org.apache.cordova.network-information" source="npm" />
+    <plugin spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
+    <plugin spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
+    
     <plugin name="org.apache.cordova.inappbrowser" source="npm" />
     <plugin spec="https://github.com/phonegap-build/StatusBarPlugin.git" source="git" />
     <plugin name="org.apache.cordova.dialogs" source="npm" />
