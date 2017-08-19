@@ -21,7 +21,7 @@
 
       <div data-role="header" data-theme="a" data-position="fixed">
         <h1 id="categoryname">&nbsp;</h1>
-        <a id="backbutton" href="index.html" data-direction="reverse" data-prefetch data-icon="arrow-l" class="ui-btn-left">Back</a>
+        <a id="backbutton" href="categories.html" data-direction="reverse" data-prefetch data-icon="arrow-l" class="ui-btn-left">Back</a>
         <a id="refreshbutton" href="#" onclick="document.location.href=document.location.href" data-theme="a"><img src="icons/refresh.png" width="19" height="19" /></a>
       </div>
 
@@ -47,10 +47,9 @@
 
 				var urlvars = getUrlVars()
 				var id = urlvars["id"];
-				setTimeout("setButton(1)",200);
-
 				pagetitle=decodeURI(urlvars["title"])
 				pagetitle=pagetitle.replace("%26","&");
+				$('.ui-page-active #categoryname').html(pagetitle);
 				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
 				setTimeout('setBackURL()',500)
 			});
