@@ -6,10 +6,10 @@
   
     <plugin spec="https://github.com/apache/cordova-plugin-device.git" source="git" />
     <plugin spec="https://github.com/apache/cordova-plugin-network-information.git" source="git" />
-    
-    <plugin name="org.apache.cordova.inappbrowser" source="npm" />
+    <plugin spec="https://github.com/apache/cordova-plugin-inappbrowser.git" source="git" />   
     <plugin spec="https://github.com/phonegap-build/StatusBarPlugin.git" source="git" />
-    <plugin name="org.apache.cordova.dialogs" source="npm" />
+    <plugin spec="https://github.com/apache/cordova-plugin-dialogs.git" source="git" />
+    
     <plugin name="onesignal-cordova-plugin" source="npm" version="1.13.1" />
     <plugin name="cordova-plugin-x-toast" source="npm" />
     <plugin name="cordova-plugin-whitelist" />
