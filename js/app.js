@@ -1,8 +1,8 @@
-var siteURL = "http://api.hebburnlakes.co.uk";
+var siteURL = "http://dsmprimary.liveschools.co.uk";
 var apiPath = "/mobile/api/";
-var postPath = "/news/age/";
-var latestPath = "/latest/";
-var pagePath = "/school/";
+var postPath = "/category/";
+var latestPath = "/";
+var pagePath = "/school-information/";
 var imgPath = "/wp-content/uploads/";
 
 var categories;
@@ -28,8 +28,8 @@ function oneSignal(){
 			getNewsletters();
 		};
 
-		window.plugins.OneSignal.init("da9f0bb8-6b47-4b9c-ad6d-d85fcb67c614",
-                                 {googleProjectNumber: "1031003525323"},
+		window.plugins.OneSignal.init("e186e7ab-7a79-49db-a001-f28bc4d58809",
+                                 {googleProjectNumber: "176978804568"},
                                  notificationOpenedCallback);
 
   // Show an alert box if a notification comes in when the user is in your app.
@@ -145,24 +145,6 @@ function getInfoList() {
         console.log(error.responseText);
     });
 }
-function getParentList() {
-    var URL = siteURL + apiPath + 'getparentlist.php?api=1';
-
-	$.getJSON(URL, function(data) {
-		$('#parentList li').remove();
-		infoPages = data.items;
-        $.each(infoPages, function(index, page) {
-			$('#parentList').append('<li><a href="viewparent.html?id=' + page.post_name + '">' +
-					'<h4>' + page.post_title + '</h4></a></li>');
-		});
-
-		$('#parentList').listview('refresh');
-		$(".ui-page div.ui-content").iscrollview();
-
-	}).error(function(error){
-        console.log(error.responseText);
-    });
-}
 
 function getNewsletters() {
 
@@ -247,7 +229,6 @@ function getPostList(data) {
 	posts = data.items;
 	$('.ui-page-active #postList li').remove();
 	$.each(posts, function(index, post) {
-
         post.image = post.image.replace("'//www","\'http://www");
         //post.avatar = post.avatar.replace("'//","\'http://");
         //post.gallery = replaceAll(post.gallery,"'//www","\'http://www");
