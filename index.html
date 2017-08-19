@@ -4,8 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
-    <title>Hebburn Lakes Primary School</title>
+    <title>Dunmow St Mary's Primary School</title>
     <link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css"/>
     <link rel="stylesheet" href="css/app.css"/>
     <script src="js/jquery-1.6.4.min.js"></script>
@@ -19,13 +18,14 @@
   </head>
 
   <body>
+  	<div id="tweetslist"></div>
     <div id="homepage" data-role="page" data-dom-cache="true">
 
       <div id="homepagecontent" data-role="content" data-iscroll>
       	<div></div>
 
 		<div id="homepagelogo">
-			<img src="icons/hebburnlakes.png" width="288" style="margin-top:10px;">
+			<img src="icons/header.png" width="288" style="margin-top:10px;">
 		</div>
 
 		<div>
@@ -62,9 +62,9 @@
       <div data-role="footer" class="ui-bar" data-position="inline" id="my-persistent-footer">
         <div data-role="navbar" class="ui-navbar">
           <ul class="ui-grid-b">
-            <li><a id="navbutton1" href="categories.html" data-icon="custom" data-prefetch data-transition="none">Classes</a></li>
+            <li><a id="navbutton1" href="posts.html?id=school&title=Activities" data-icon="custom" data-prefetch data-transition="none">Activities</a></li>
             <li><a id="navbutton2" href="schoolinfo.html" data-icon="custom" data-prefetch data-transition="none">School Info</a></li>
-            <li><a id="navbutton3" href="parents.html" data-icon="custom" data-prefetch data-transition="none">Parents</a></li>
+            <li><a id="navbutton3" href="newsletter.html?id=newsletter&title=Newsletter" data-icon="custom" data-prefetch data-transition="none">Newsletter</a></li>
             <li><a id="navbutton4" href="contact.html" data-icon="custom" data-prefetch data-transition="none">Contact</a></li>
           </ul>
         </div>
@@ -118,6 +118,7 @@
 				 hasScrolled=false;
 				$(".ui-page-active div.ui-content").iscrollview();
 				setTimeout("nextStory()",2000);
+
 			});
 			$("#homepage").live('pageinit', function() {
 				getLatest();

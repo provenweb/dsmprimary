@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.instantapps.hebburnlakes" version="1.8.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Hebburn Lakes</name>
-    <description>Hebburn Lakes Primary School</description>    
+<widget id="com.instantapps.dsmprimary" version="1.8.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Dunmow St Marys</name>
+    <description>Dunmow St Marys Primary School</description>    
     <author email="sales@provenweb.co.uk" href="http://www.provenweb.co.uk">Proven Web</author>
 
     <plugin name="org.apache.cordova.device" source="npm" />
