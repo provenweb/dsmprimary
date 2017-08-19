@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
 	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Dunmow St Mary's Primary School - Settings</title>
+    <title>Hebburn Lakes Primary School - Settings</title>
     <link rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css"/>
     <link rel="stylesheet" href="css/app.css"/>
     <script src="js/jquery-1.6.4.min.js"></script>
@@ -41,30 +41,34 @@
       <div data-role="footer" class="ui-bar" data-position="inline" id="my-persistent-footer">
         <div data-role="navbar" class="ui-navbar">
           <ul class="ui-grid-b">
-            <li><a id="navbutton1" href="posts.html?id=school&title=Activities" data-icon="custom" data-prefetch data-transition="none">Activities</a></li>
-            <li><a id="navbutton2" href="schoolinfo.html" data-icon="custom" data-prefetch data-transition="none">School Info</a></li>
-            <li><a id="navbutton3" href="newsletter.html?id=newsletter&title=Newsletter" data-icon="custom" data-prefetch data-transition="none">Newsletter</a></li>
+            <li><a id="navbutton1" href="categories.html" data-icon="custom" data-prefetch data-transition="none">Classes</a></li>
+            <li><a id="navbutton3" href="schoolinfo.html" data-icon="custom" data-prefetch data-transition="none">School Info</a></li>
+            <li><a id="navbutton2" href="parents.html" data-icon="custom" data-prefetch data-transition="none">Parents</a></li>
             <li><a id="navbutton4" href="contact.html" data-icon="custom" data-prefetch data-transition="none">Contact</a></li>
 		  </ul>
         </div>
       </div>
 	  <script type="text/javascript">
-			$("#settingsPage").live('pageshow', function() {
-				$(".ui-page-active div.ui-content").iscrollview();
-			});
 
-	  </script>
+	//  Uncomment this to show all Javascript errors as alerts in the browser, to help mobile debugging
+	//  window.addEventListener("error", handleError, true);
+	//	function handleError(evt) {
+	//		if (evt.message) { // Chrome sometimes provides this
+	//		  alert("error: "+evt.message +" at linenumber: "+evt.lineno+" of file: "+evt.filename);
+	//		} else {
+	//		  alert("error: "+evt.type+" from element: "+(evt.srcElement || evt.target));
+	//		}
+	//	}
 
-	  <script>
+	  $("#settingsPage").live('pageshow', function() {
+		  $(".ui-page-active div.ui-content").iscrollview();
+	  });
+
 	  var taglist = {};
-	  var url = "/mobile/api/getallcategories.php";
+	  var url = "http://api.hebburnlakes.co.uk/mobile/api/getallcategories.php";
 			$.getJSON(url, function(json) {
-				console.log(json);
-				console.log(json.items.length);
 
 				for(var i=0;i<json.items.length;i++){
-
-				console.log(json.items[i].name);
 
 				var node = document.createElement('div');
 				node.innerHTML = '<input type="checkbox" id="' + json.items[i].slug + '" name="' + json.items[i].slug + '"><label for="' + json.items[i].slug + '">'+ json.items[i].name; +'</label>';
@@ -87,28 +91,28 @@
 			$('#checkboxes input:checkbox:not(:checked)').each(function() {
 				notselected.push($(this).attr('id'));
 				window.localStorage.setItem($(this).attr('id'), 0);
-				console.log(notselected);
+				//console.log(notselected);
 			});
 
 			$('#checkboxes input:checked').each(function() {
 				selected.push($(this).attr('id'));
 				window.localStorage.setItem($(this).attr('id'), 1);
-				console.log(selected);
+				//console.log(selected);
 			});
-			console.log("taglist before "+taglist);
+			strTags="";
 			for(var n = 0; n < selected.length;n++){
 					taglist[selected[n]]= "true";
+					strTags+=selected[n]+"|";
 			}
-
-			console.log("taglist after "+taglist);
-			window.plugins.OneSignal.init("e186e7ab-7a79-49db-a001-f28bc4d58809",
-                               {googleProjectNumber: "176978804568",
+			//OneSignal
+			window.plugins.OneSignal.init("da9f0bb8-6b47-4b9c-ad6d-d85fcb67c614",
+                               {googleProjectNumber: "1031003525323",
                                 autoRegister: false});
 
-		window.plugins.OneSignal.sendTags(taglist);
-		window.localStorage.setItem("registered", 1);
-		window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){alert('toast error: ' + b)});
-		window.plugins.OneSignal.deleteTags(notselected);
+			window.plugins.OneSignal.sendTags(taglist);
+			window.localStorage.setItem("registered", 1);
+			window.plugins.toast.showShortBottom('Categories saved', function(a){console.log('toast success: ' + a)}, function(b){console.log('toast error: ' + b)});
+			window.plugins.OneSignal.deleteTags(notselected);
 		});
 	  </script>
     </div>

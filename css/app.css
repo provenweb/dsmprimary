@@ -7,7 +7,7 @@
 }
 
 .ui-header hi{
-    background-color: #1AB7B3;
+    background-color: #60489e;
 }
 
 span.ui-btn-text {
@@ -21,7 +21,7 @@ span.ui-btn-text {
 
 .ui-header {
 
-	background:#1AB7B3;
+	background:#7a61bc;
 	text-shadow:none;
 	border:0;
 	border-bottom:0;
@@ -81,10 +81,10 @@ span.ui-btn-text {
 #mapbutton { margin-bottom:20px; float:right ; top:-4px; }
 
 #phonebutton,#mapbutton,#emailbutton {
-	background: url(../icons/dots-pattern.png) #1AB7B3;
+	background: url(../icons/dots-pattern.png) #A887CA;
 }
 
-#phonebutton span { font-size: 20px ; }
+#phonebutton span { font-size: 20px ; width: 100%; box-sizing: border-box; }
 #emailbutton span { font-size: 15px ; }
 #mapbutton span { 
     font-size: 17px;
@@ -142,7 +142,7 @@ span.latestnews {
 	float:left;
 }
 
-#settingsPage #checkboxes div:first-child {
+#x_settingsPage #checkboxes div:first-child {
     width: 100%;
     border-bottom: 1px solid #c8c8c8;
     padding-bottom: 5px;
@@ -176,13 +176,13 @@ span.latestnews {
 }
 
 #categoryPage,#newsletterPage { background: #f4f4f4; }
-#postViewPage .ui-content,#infoViewPage .ui-content,#infoPage .ui-content { background: #f4f4f4; }
+#postViewPage .ui-content,#infoViewPage .ui-content,#parentViewPage .ui-content,#infoPage .ui-content,#parentPage .ui-content { background: #f4f4f4; }
 
 
 
 #postTitle {
 
-	color: #1AB7B3;
+	color: #60489e;
 	font-family: "TOONISH",Arial,Helvetica,sans-serif;
 	font-weight: normal;
 	font-size: 28px;
@@ -418,7 +418,7 @@ dl.attachments {
 	background-color: #eee;
 	border: 1px solid #444;
 	border-radius: 10px;
-	color: #1AB7B3;
+	color: #60489e;
 	font-size: 12px;
 	font-family: Arial;
 	line-height: 23px;
@@ -430,7 +430,7 @@ dl.attachments {
 
 dl.attachments a {
 
-	color:#1AB7B3;
+	color:#60489e;
 	font-weight:bold;
 	text-decoration:none;
 	font-size: 13px;
@@ -479,14 +479,14 @@ div.attachments img {
 
 .ui-navbar .ui-btn-up-a {
 
-    background: #1db0ac;
-    border-left: 1px solid #14504a;
+    background: #60489f;
+    border-left: 1px solid #3a1983;
 }
 
 .ui-navbar .ui-btn-hover-a, .ui-navbar .ui-btn-active {
-    background: #00A9FF;
+    background: #A887CA;
     border:0;
-    border-left: 1px solid #4976B9;
+    border-left: 1px solid #4e3d8a;
 
 }
 
@@ -506,7 +506,7 @@ div.attachments img {
 
 	width: 30px;
 	height: 24px;
-	background: url(../icons/jump.png);
+	background: url(../icons/schoolhaticon.png);
 	background-repeat:no-repeat;
 	margin-left: -13px;	
 	border-radius:0;
@@ -516,8 +516,8 @@ div.attachments img {
 
 
 .ui-footer .ui-block-a .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-a a:active .ui-icon-custom {
-
-	x_background: url(../icons/newsselected.png);
+ 
+	x_background: url(../icons/schoolhatselected.png);
 	background-size:30px 24px !important;	
 
 } 
@@ -529,9 +529,9 @@ div.attachments img {
 	padding-top: 5px;
 }
 
-#postList .ui-btn-active,#categoryList .ui-btn-active,#schoolInfoList .ui-btn-active,#newsletterList .ui-btn-active {
+#postList .ui-btn-active,#categoryList .ui-btn-active,#schoolInfoList .ui-btn-active,#parentList .ui-btn-active,#parentList .ui-btn-active,#newsletterList .ui-btn-active {
 
-	background:#1AB7B3;
+	background:#A887CA;
 
 }
 
@@ -539,7 +539,7 @@ div.attachments img {
 
 	width: 26px;
 	height: 26px;
-	background: url(../icons/infoicon.png);
+	background: url(../icons/infoicon.png);  
 	background-repeat:no-repeat;
 	background-size:26px 26px !important;
 	margin-left: -13px;
@@ -550,7 +550,7 @@ div.attachments img {
 
 .ui-footer .ui-block-b .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-b a:active .ui-icon-custom {
 
-	x_background: url(../icons/infoiconselected.png);
+	x_background: url(../icons/infoselected.png);
 	background-size:26px 26px !important;
 
 } 
@@ -558,20 +558,20 @@ div.attachments img {
 
 .ui-footer .ui-block-c .ui-btn-inner .ui-icon-custom {
 
-	width: 26px;
-	height: 26px;
+	width: 29px;
+	height: 25px;
 	background: url(../icons/newsicon.png);
 	background-repeat:no-repeat;
-	background-size:26px 26px !important;
-	margin-left: -13px; 
+	background-size:29px 25px !important;
+	margin-left: -14px; 
 	border-radius:0;
 
 }
 
 .ui-footer .ui-block-c .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-c a:active .ui-icon-custom {
 
-	x_background: url(../icons/newsicon.png);
-	background-size:26px 26px !important;
+	x_background: url(../icons/newsiconselected.png);
+	background-size:29px 25px !important;
 
 }
 
@@ -579,7 +579,7 @@ div.attachments img {
 
 	width: 26px;
 	height: 26px;
-	background: url(../icons/phoneicon.png);
+	background: url(../icons/phoneicon.png); 
 	background-repeat:no-repeat;
 	background-size:26px 26px !important;
 	margin-left: -12px;
@@ -598,7 +598,7 @@ div.attachments img {
     width: 156px;
     margin: auto;
     border: 1px solid #FFF;
-    background: #00b4f1;
+    background: #A887CA;
     border-radius: 8px;
     height: 39px; 
 }
@@ -652,7 +652,7 @@ div.attachments img {
 
 #attachments span.ui-btn-inner {
 	padding: .5em 25px .7em 25px;
-	background: url(../icons/dots-pattern.png) #1AB7B3;
+	background: url(../icons/dots-pattern.png) #A887CA;
 }
 
 #mainphoto {
@@ -785,15 +785,14 @@ div.attachments img {
 }
 
 #indicator > li.active {
-	background:#a33;
+	background:#FFBD00;
 }
 
 #indicator > li:last-child {
 	margin:0;
 }
 #homepagelogo {
-	background:url(../icons/cloud.jpg) #B8D3E4;
-	background-size:100%;
+	background:url(../icons/dots-pattern.png) #A887CA;
 	text-align:center;
 	padding-bottom: 12px;
 	padding-top: 6px;
@@ -814,7 +813,7 @@ div.attachments img {
 	padding:0;
  	background: url(../icons/footer.png);
     	background-repeat: no-repeat;
-    	background-position: bottom center;
+    	background-position: 60% 100%;
     	background-size: 225% auto;
 }
 
@@ -833,7 +832,7 @@ div.attachments img {
 
 #latestheader li {
     border-radius: 10px 10px 0 0;
-    background: url(../icons/dots-pattern.png) #327f7d;
+    background: url(../icons/dots-pattern.png) #60489e;
     font-family: "TOONISH",Arial,Helvetica,sans-serif;
     line-height: 14px;
     font-weight: normal;
@@ -845,11 +844,11 @@ div.attachments img {
     box-shadow: none;
 } 
 
-#categoryList div.ui-btn-inner,#newsletterList div.ui-btn-inner,#schoolInfoList div.ui-btn-inner {
+#categoryList div.ui-btn-inner,#newsletterList div.ui-btn-inner,#schoolInfoList div.ui-btn-inner,#parentList div.ui-btn-inner {
 	height:46px;
 }
 
-#categoryList a.ui-link-inherit,#newsletterList a.ui-link-inherit,#schoolInfoList a.ui-link-inherit {
+#categoryList a.ui-link-inherit,#newsletterList a.ui-link-inherit,#schoolInfoList a.ui-link-inherit,#parentList a.ui-link-inherit {
 	padding-top:2px;
 	padding-bottom:2px;
 }
@@ -871,7 +870,7 @@ div.attachments img {
        height: 36px;
        margin-top: 5px;	
 	border:0;
-	background: #1AB7B3;
+	background: #60489e;
 	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 	text-shadow: none;
@@ -883,7 +882,7 @@ div.attachments img {
 
 .ui-page-active .ui-header a.ui-btn-active,.ui-page-active .ui-header a:active,#refreshbutton:hover {
 
-	background: #00A9FF !important;
+	background: #A887CA !important;
 }
 
 .ui-page-active .ui-header a.ui-btn-active span.ui-btn-inner,.ui-page-active .ui-header a:active span.ui-btn-inner,#refreshbutton:hover span.ui-btn-inner {
@@ -893,11 +892,11 @@ div.attachments img {
 li.ui-btn { opacity:0.95 !important; }
 
 #set_notifications:hover,#set_notifications:active {
-    background: #02aae3;
+    background: #60489f;
 }
 
 #settingsPage #submit:focus {
-    background: #1AB7B4;
+    background: #60489f;
 }
 
 xx_.ui-listview .ui-li .ui-btn-text { height: 100%; }
@@ -978,15 +977,4 @@ xx_.ui-listview .ui-li .ui-btn-text a h4.ui-li-heading { margin-top: auto; margi
 	    padding-top: 7px;
 	}
 
-}
-
-#tweetspage .ui-content { padding:0; }
-
-#postListPage { 
- 	background-position: center bottom 50px;
-
-}
-
-#twitter-widget-1 .timeline-Footer {
-    display: none;
 }
