@@ -2,7 +2,7 @@ var siteURL = "http://dsmprimary.liveschools.co.uk";
 var apiPath = "/mobile/api/";
 var postPath = "/category/";
 var latestPath = "/";
-var pagePath = "/school-information/";
+var pagePath = "/mobile/get?p=";
 var imgPath = "/wp-content/uploads/";
 
 var categories;
@@ -125,7 +125,7 @@ function getCategoryList() {
 }
 
 function getInfoList() {
-    var URL = siteURL + apiPath + 'getinfolist.php?api=1';
+    var URL = siteURL + apiPath + 'getinfolist2.php?api=1';
 
 	$.getJSON(URL, function(data) {
 		$('#schoolInfoList li').remove();
