@@ -68,7 +68,8 @@
 				var urlvars = getUrlVars()
 				currentPage = $(event.target);
 				theTarget = event.target;
-				$.getJSON(siteURL + pagePath + urlvars["id"], getSinglePage);
+				var freshURL = siteURL + pagePath + urlvars["id"] + "&t=" + Date.now();
+				$.getJSON(freshURL, getSinglePage);
 				currentPage.attr('pagename', urlvars["id"]);
 				setTimeout(resizeThis, 1000);
 				setTimeout(resizeThis, 2000);

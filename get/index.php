@@ -26,7 +26,10 @@ function element_to_obj($element) {
 
 $page=$_GET['p'];
 
-$remotepage = file_get_contents('http://www.dsmprimary.essex.sch.uk'.$page, false);
+$freshurl = 'http://www.dsmprimary.essex.sch.uk'.$page;
+$freshurl .= "?t=".time();
+
+$remotepage = file_get_contents($freshurl, false);
 $strpos = strpos($remotepage,'<h1 class="page-title">');
 $htmlpage = substr($remotepage, $strpos+23);
 $strpos = strpos($htmlpage,'</h1>');

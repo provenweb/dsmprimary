@@ -2,7 +2,7 @@ var siteURL = "http://dsmprimary.liveschools.co.uk";
 var apiPath = "/mobile/api/";
 var postPath = "/category/";
 var latestPath = "/";
-var pagePath = "/mobile/get?p=";
+var pagePath = "/mobile/get/?p=";
 var imgPath = "/wp-content/uploads/";
 
 var categories;
@@ -20,7 +20,6 @@ function onDeviceReady() {
 }
 
 function oneSignal(){
-	console.log("It is calling");
 		var notificationOpenedCallback = function(jsonData) {
 			console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
 			console.log(jsonData.additionalData.url);
