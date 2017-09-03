@@ -64,8 +64,8 @@ $content = str_replace(" > ",">",$content);
 $content = str_replace("a style='' ","a ",$content);
 $content = str_replace("a href='#","a style='color:#000;text-decoration:none' href='#",$content);
 $content = str_replace("<img ","<img style='max-width: 100%;height: auto;border-radius: 10px;box-shadow: 1px 1px 9px #aaa;margin-bottom: 9px;' ",$content);
-$content = str_replace("<p><a href","<p><a target='_blank' style='background: #1AB7B3; color: #fff; text-shadow: none; padding: 4px 15px; border-radius: 9px; text-decoration: none; box-shadow: 1px 1px 3px #aaa; line-height: 22px;display: inline-block;    margin: -5px 0 0 0;' href",$content);
-$content = str_replace("<a href","<a target='_blank' style='color: #1AB7B3;' href",$content);
+$content = str_replace("<p><a href","<p><a target='_system' class='btnstyle' onclick='window.open(this.href,\\\"_system\\\");return false;' href",$content);
+$content = str_replace("<a href","<a target='_system' style='color: #1AB7B3;' onclick='window.open(this.href,\\\"_system\\\");return false;' href",$content);
 
 $imgcontent = strip_tags($content, '<img>');
 $imgcontent = html_to_obj($imgcontent);
@@ -73,16 +73,20 @@ $imgcontent = html_to_obj($imgcontent);
 $images = $imgcontent["children"][0]["children"][0]["children"];
 if (empty ($images)) { $images = $imgcontent["children"][0]["children"]; }
 
-
 $gallery='';
 
 foreach ($images as $key => $item) {
 
 	$src = $item["src"];
+	$tag = $item["tag"];
 
-	$gallery.= "<a href='".$src."' rel='external'><img src='".$src."' alt='' /></a>";
+	if ($tag=="img") { $gallery.= "<a href='".$src."' rel='external'><img src='".$src."' alt='' /></a>"; }
 
 }
+
+
+
+
 
 // "attachments":"<a class='ui-btn ui-btn-corner-all ui-shadow ui-btn-up-b' target='_system' onclick='window.open(\"http://www.frontstreetprimary.co.uk/wp-content/uploads/2014/09/Nursery-Admission-Policy-2016-2017.docx\", \"_system\")' ><span class='ui-btn-inner ui-btn-corner-all'><span class='ui-btn-text'>Nursery Admission Policy 2016 2017</span></span></a><a class='ui-btn ui-btn-corner-all ui-shadow ui-btn-up-b' target='_system' onclick='window.open(\"http://www.frontstreetprimary.co.uk/wp-content/uploads/2014/09/Nursery-Application-Form-2016-2017.doc\", \"_system\")' ><span class='ui-btn-inner ui-btn-corner-all'><span class='ui-btn-text'>Nursery Application Form 2016 2017</span></span></a><a class='ui-btn ui-btn-corner-all ui-shadow ui-btn-up-b' target='_system' onclick='window.open(\"http://www.frontstreetprimary.co.uk/wp-content/uploads/2014/09/NEW-PROSPECTUS-2016.pdf\", \"_system\")' ><span class='ui-btn-inner ui-btn-corner-all'><span class='ui-btn-text'>new-prospectus-2016</span></span></a><a class='ui-btn ui-btn-corner-all ui-shadow ui-btn-up-b' target='_system' onclick='window.open(\"http://www.frontstreetprimary.co.uk/wp-content/uploads/2014/09/Letter-from-Westminster-regarding-school-performance.pdf\", \"_system\")' ><span class='ui-btn-inner ui-btn-corner-all'><span class='ui-btn-text'>Letter from Westminster regarding school performance</span></span></a><a class='ui-btn ui-btn-corner-all ui-shadow ui-btn-up-b' target='_system' onclick='window.open(\"http://www.frontstreetprimary.co.uk/wp-content/uploads/2014/09/Admissions-2016.docx\", \"_system\")' ><span class='ui-btn-inner ui-btn-corner-all'><span class='ui-btn-text'>admissions-2016</span></span></a>",
 // "image":"<img x='683' y='403' src='http://www.frontstreetprimary.co.uk/image.php?w=600&h=320&zc=1&a=l&q=50&src=http://www.frontstreetprimary.co.uk/wp-content/uploads/2014/09/reception.jpg' class='attachment-post-thumbnail size-post-thumbnail wp-post-image' alt='' />",
