@@ -70,7 +70,9 @@
 				theTarget = event.target;
 				$.getJSON(siteURL + pagePath + urlvars["id"], getSinglePage);
 				currentPage.attr('pagename', urlvars["id"]);
-
+				setTimeout(resizeThis, 1000);
+				setTimeout(resizeThis, 2000);
+				setTimeout(resizeThis, 5000);
 			});
 
 			$('#infoViewPage').live('pagehide', function(event, ui) {
@@ -80,6 +82,15 @@
 						$('#infoViewPage').die(photoSwipeInstance);
 					}
 			});
+
+			function resizeThis(){
+
+				var resizeEvent = new Event('resize');
+				window.dispatchEvent(resizeEvent);
+
+			}
+
+
 
 	  </script>
 

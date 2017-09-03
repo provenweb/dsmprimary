@@ -187,7 +187,15 @@ function getNewsletters() {
 			//$('#newsletterList').append('<li><a target="_system" onclick="' + post.guid + '&download=1">' +
 			//		'<h4>' + thedate + '</h4></a></li>');
 			//
-			$('#newsletterList').append('<li><a target="_system" onclick="window.open('+"'"+post.guid+"&download=1', '_system'"+')">' +
+
+			var newsletter_url=""+post.guid;
+			if (newsletter_url.includes("?")) {
+				newsletter_url+="&download=1";
+			} else {
+				newsletter_url+="?download=1";
+			}
+
+			$('#newsletterList').append('<li><a target="_system" onclick="window.open('+"'"+newsletter_url+"', '_system'"+')">' +
 					'<h4>' + thedate + '</h4></a></li>');
             //$('#newsletterList').append('<li><a class="link" rel="' + post.guid + '&download=1">' +
 			//		'<h4>' + thedate + '</h4></a></li>');

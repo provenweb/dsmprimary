@@ -990,3 +990,15 @@ xx_.ui-listview .ui-li .ui-btn-text a h4.ui-li-heading { margin-top: auto; margi
 #twitter-widget-1 .timeline-Footer {
     display: none;
 }
+
+a.btnstyle {
+	background: #1AB7B3 url(../icons/dots-pattern.png); 
+	color: #fff; text-shadow: none; padding: 4px 15px; border-radius: 17px; text-decoration: none; box-shadow: 1px 1px 3px #aaa; line-height: 22px; display: inline-block; margin: -5px 0 0 0; 
+	border: 1px solid rgb(131, 131, 131); border-top: 1px solid #a0a0a0; border-left: 1px solid #8b8b8b;	
+}
+
+a.btnstyle:hover,a.btnstyle:active {
+    border: 2px solid #fff;
+    box-shadow: 1px 1px 3px #717d31;
+    margin-bottom: -2px;
+}
